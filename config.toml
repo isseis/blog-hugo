@@ -8,3 +8,8 @@ paginate = 5
 
 [permalinks]
   "posts" = ":year/:month/:day/:slug"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
