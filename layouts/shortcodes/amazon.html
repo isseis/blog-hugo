@@ -1,0 +1,38 @@
+{{- $asin := .Get "asin" -}}
+{{- $title := .Get "title" -}}
+{{- $author := .Get "author" -}}
+{{- $publisher := .Get "publisher" -}}
+{{- $isbn := .Get "isbn" -}}
+
+{{- if $asin -}}
+<a style="margin: 2em 0;" href="https://www.amazon.co.jp/dp/{{ $asin }}">
+    <img src="https://images-na.ssl-images-amazon.com/images/P/{{ $asin }}.09.LZZZZZZZ.jpg" width="200">
+</a>
+{{- end -}}
+
+<table>
+    <tbody>
+        <tr>
+            <th>書名</th>
+            <td><a href="https://www.amazon.co.jp/dp/{{ $asin }}">{{ $title }}</a></td>
+        </tr>
+        {{- if $author -}}
+        <tr>
+            <th>著者</th>
+            <td>{{ $author }}</td>
+        </tr>
+        {{- end -}}
+        {{- if $publisher -}}
+        <tr>
+            <th>出版社</th>
+            <td>{{ $publisher }}</td>
+        </tr>
+        {{- end -}}
+        {{- if $isbn -}}
+        <tr>
+            <th>ISBN</th>
+            <td>{{ $isbn }}</td>
+        </tr>
+        {{- end -}}
+    </tbody>
+</table>
