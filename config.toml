@@ -1,4 +1,4 @@
-baseURL = "https://blog2.issei.org/"
+baseURL = "https://issei.netlify.app/"
 languageCode = "ja"
 title = "或曰"
 theme = "pickles"
