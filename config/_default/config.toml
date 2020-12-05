@@ -1,0 +1,35 @@
+baseURL = "https://blog-hugo-issei.web.app/"
+languageCode = "ja"
+title = "或曰"
+theme = "pickles"
+hasCJKLanguage = "true"
+summaryLength = 100
+paginate = 5
+
+[permalinks]
+  "posts" = ":year/:month/:day/:slug"
+
+[params]
+  twitter = "issei_swe"
+  github = "isseis"
+  author = "鈴木一生"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[[menu.main]]
+  name = "Web"
+  url = "https://www.issei.org/"
+  weight = 1
+
+[[menu.main]]
+  name = "About"
+  url = "/about"
+  weight = 2
+
+[[menu.main]]
+  name = "Tags"
+  url = "/tags"
+  weight = 4
