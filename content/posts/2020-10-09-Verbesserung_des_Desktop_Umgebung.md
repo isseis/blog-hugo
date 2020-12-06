@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/10/09/Verbesserung_des_Desktop_Umgebung.md
+- /2020/10/09/Verbesserung_des_Desktop_Umgebung.html
 date: 2020-10-09 14:01:00 +0200
 slug: Verbesserung_des_Desktop_Umgebung
 tags:

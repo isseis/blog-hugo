@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/10/07/bezhiehungen_zwischen_woerter.md
+- /2020/10/07/bezhiehungen_zwischen_woerter.html
 date: 2020-10-07 20:19:46 +0200
 slug: bezhiehungen_zwischen_woerter
 tags:

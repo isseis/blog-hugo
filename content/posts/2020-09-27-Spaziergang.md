@@ -1,8 +1,6 @@
 ---
 aliaes:
 - /2020/09/27/Spaziergang.html
-aliases:
-- 2020/09/27/Spaziergang.md
 date: 2020-09-27 17:58:05 +0200
 slug: Spaziergang
 tags:

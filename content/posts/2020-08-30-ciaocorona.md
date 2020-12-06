@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/08/30/ciaocorona.md
+- /2020/08/30/ciaocorona.html
 date: 2020-08-30 12:27:34 +0200
 slug: ciaocorona
 tags:

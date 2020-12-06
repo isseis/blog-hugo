@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/11/16/Verlaengerung_der_Aufenthaltsbewilligung.md
+- /2020/11/16/Verlaengerung_der_Aufenthaltsbewilligung.html
 date: 2020-11-16 09:57:37 +0100
 slug: Verlaengerung_der_Aufenthaltsbewilligung
 tags:

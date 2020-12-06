@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/11/05/Neues-vom-Raeuber-Hotzenplotz.md
+- /2020/11/05/Neues-vom-Raeuber-Hotzenplotz.html
 date: 2020-11-05 18:01:22 +0100
 slug: Neues-vom-Raeuber-Hotzenplotz
 tags:

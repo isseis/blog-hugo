@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/08/16/bookreview.md
+- /2020/08/16/bookreview.html
 date: 2020-08-16 11:32:00 +0200
 slug: bookreview
 tags:

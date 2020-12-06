@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/08/21/smartwatch.md
+- /2020/08/21/smartwatch.html
 date: 2020-08-21 09:04:00 +0200
 slug: smartwatch
 tags:

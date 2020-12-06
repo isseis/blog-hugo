@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/11/17/binoxxo_solver.md
+- /2020/11/17/binoxxo_solver.html
 date: 2020-11-17 18:16:08 +0100
 slug: binoxxo_solver
 tags:

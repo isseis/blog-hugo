@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/08/24/apps_script_for_billing.md
+- /2020/08/24/apps_script_for_billing.html
 date: 2020-08-24 17:45:41 +0200
 slug: apps_script_for_billing
 tags:

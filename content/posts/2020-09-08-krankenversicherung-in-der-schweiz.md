@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/09/08/krankenversicherung-in-der-schweiz.md
+- /2020/09/08/krankenversicherung-in-der-schweiz.html
 date: 2020-09-08 17:06:05 +0200
 slug: krankenversicherung-in-der-schweiz
 tags:

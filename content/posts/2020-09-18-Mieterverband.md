@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/09/18/Mieterverband.md
+- /2020/09/18/Mieterverband.html
 date: 2020-09-18 13:55:02 +0200
 slug: Mieterverband
 tags:

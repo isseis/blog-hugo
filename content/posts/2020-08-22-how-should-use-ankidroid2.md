@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/08/22/how-should-use-ankidroid2.md
+- /2020/08/22/how-should-use-ankidroid2.html
 date: 2020-08-22 22:05:07 +0200
 slug: how-should-use-ankidroid2
 tags:

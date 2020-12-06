@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/11/01/leuchtstoffroehren.md
+- /2020/11/01/leuchtstoffroehren.html
 date: 2020-11-01 10:11:00 +0200
 slug: leuchtstoffroehren
 tags:

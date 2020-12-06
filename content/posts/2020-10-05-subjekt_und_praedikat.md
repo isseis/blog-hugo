@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/10/05/subjekt_und_praedikat.md
+- /2020/10/05/subjekt_und_praedikat.html
 date: 2020-10-05 01:36:49 +0200
 slug: subjekt_und_praedikat
 tags:

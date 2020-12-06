@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/08/27/kinderbrillen.md
+- /2020/08/27/kinderbrillen.html
 date: 2020-08-27 13:40:22 +0200
 slug: kinderbrillen
 tags:

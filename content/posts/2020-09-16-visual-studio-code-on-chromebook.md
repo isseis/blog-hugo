@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/09/16/visual-studio-code-on-chromebook.md
+- /2020/09/16/visual-studio-code-on-chromebook.html
 date: 2020-09-16 21:25:29 +0200
 slug: visual-studio-code-on-chromebook
 tags:

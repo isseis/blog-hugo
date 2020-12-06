@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/09/11/change-theme-to-minimal-mistake.md
+- /2020/09/11/change-theme-to-minimal-mistake.html
 date: 2020-09-11 01:42:16 +0200
 slug: change-theme-to-minimal-mistake
 tags:

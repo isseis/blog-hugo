@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/08/31/telefonschaltkonferenz-der-bundeskanzlerin.md
+- /2020/08/31/telefonschaltkonferenz-der-bundeskanzlerin.html
 date: 2020-08-31 11:28:22 +0200
 slug: telefonschaltkonferenz-der-bundeskanzlerin
 tags:

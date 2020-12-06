@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/11/01/covid19-in-der-schweiz.md
+- /2020/11/01/covid19-in-der-schweiz.html
 date: 2020-11-01 11:02:00 +0200
 slug: covid19-in-der-schweiz
 tags:

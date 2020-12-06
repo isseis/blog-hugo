@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/10/23/image-zoom.md
+- /2020/10/23/image-zoom.html
 date: 2020-10-23 19:00:00 +0200
 slug: image-zoom
 tags:

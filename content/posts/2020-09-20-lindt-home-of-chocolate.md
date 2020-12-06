@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/09/20/lindt-home-of-chocolate.md
+- /2020/09/20/lindt-home-of-chocolate.html
 date: 2020-09-20 23:43:19 +0200
 slug: lindt-home-of-chocolate
 tags:

@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/09/12/hosting-static-web-contents.md
+- /2020/09/12/hosting-static-web-contents.html
 date: 2020-09-12 17:40:42 +0200
 slug: hosting-static-web-contents
 tags:

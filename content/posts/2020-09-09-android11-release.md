@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/09/09/android11-release.md
+- /2020/09/09/android11-release.html
 date: 2020-09-09 15:39:10 +0200
 slug: android11-release
 tags:

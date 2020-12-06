@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/08/31/regenbogen.md
+- /2020/08/31/regenbogen.html
 date: 2020-08-31 19:03:05 +0200
 slug: regenbogen
 tags:

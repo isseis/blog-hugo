@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/09/26/ankidroid_for_kanji.md
+- /2020/09/26/ankidroid_for_kanji.html
 date: 2020-09-26 12:05:14 +0200
 slug: ankidroid_for_kanji
 tags:

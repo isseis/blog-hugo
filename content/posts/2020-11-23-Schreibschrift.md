@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/11/23/Schreibschrift.md
+- /2020/11/23/Schreibschrift.html
 date: 2020-11-23 22:05:06 +0100
 slug: Schreibschrift
 tags:

@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/09/28/lernzielkontrolle.md
+- /2020/09/28/lernzielkontrolle.html
 date: 2020-09-28 22:42:01 +0200
 slug: lernzielkontrolle
 tags:

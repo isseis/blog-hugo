@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/09/20/blog-hosting-on-netlify.md
+- /2020/09/20/blog-hosting-on-netlify.html
 date: 2020-09-20 21:28:06 +0200
 slug: blog-hosting-on-netlify
 tags:

@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/09/14/Knabenschiessen.md
+- /2020/09/14/Knabenschiessen.html
 date: 2020-09-14 21:07:30 +0200
 header: null
 slug: Knabenschiessen

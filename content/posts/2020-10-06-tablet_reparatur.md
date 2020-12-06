@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/10/06/tablet_reparatur.md
+- /2020/10/06/tablet_reparatur.html
 date: 2020-10-06 10:30:00 +0200
 slug: tablet_reparatur
 tags:

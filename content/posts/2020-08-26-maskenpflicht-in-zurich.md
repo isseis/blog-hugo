@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/08/26/maskenpflicht-in-zurich.md
+- /2020/08/26/maskenpflicht-in-zurich.html
 date: 2020-08-26 19:33:43 +0200
 slug: maskenpflicht-in-zurich
 tags:

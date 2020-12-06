@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/08/13/welcome-to-jekyll.md
+- /2020/08/13/welcome-to-jekyll.html
 date: 2020-08-13 00:16:00 +0200
 slug: welcome-to-jekyll
 tags:

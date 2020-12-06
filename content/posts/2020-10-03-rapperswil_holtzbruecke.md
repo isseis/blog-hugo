@@ -1,6 +1,6 @@
 ---
 aliases:
-- 2020/10/03/rapperswil_holtzbruecke.md
+- /2020/10/03/rapperswil_holtzbruecke.html
 date: 2020-10-03 16:52:00 +0200
 slug: rapperswil_holtzbruecke
 tags:
