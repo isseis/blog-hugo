@@ -1,4 +1,4 @@
-baseURL = "https://blog-hugo-issei.web.app/"
+baseURL = "https://blog2.issei.org/"
 languageCode = "ja"
 title = "或曰"
 theme = "pickles"
