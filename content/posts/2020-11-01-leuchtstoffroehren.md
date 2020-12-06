@@ -1,10 +1,11 @@
 ---
-title:  スイスにおける直線型蛍光管の規格
-tags:	[スイス生活]
-date:	2020-11-01 10:11:00 +0200
-slug:   leuchtstoffroehren
 aliases:
-    - /2020/11/01/leuchtstoffroehren.html
+- 2020/11/01/leuchtstoffroehren.md
+date: 2020-11-01 10:11:00 +0200
+slug: leuchtstoffroehren
+tags:
+- スイス生活
+title: スイスにおける直線型蛍光管の規格
 ---
 現住居に入居して5年以上経ちますが、初めて蛍光管が切れました。
 蛍光管を注文するにあたって規格を調べたのでメモ。

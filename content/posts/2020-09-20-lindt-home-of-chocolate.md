@@ -1,10 +1,11 @@
 ---
-title:  "Lindt: Home of Chocolate"
-tags:	["日記"]
-date:	2020-09-20 23:43:19 +0200
-slug:   lindt-home-of-chocolate
 aliases:
-    - /2020/09/20/lindt-home-of-chocolate.html
+- 2020/09/20/lindt-home-of-chocolate.md
+date: 2020-09-20 23:43:19 +0200
+slug: lindt-home-of-chocolate
+tags:
+- 日記
+title: 'Lindt: Home of Chocolate'
 ---
 スイスのチョコレートブランド「Lindt リンツ」の本社工場が近所にあるのですが、
 そこでチョコレートの製法や歴史を扱う博物館 [Lindt : Home of Chocolate](https://www.lindt-home-of-chocolate.com/de/) がオープンしました。

@@ -1,10 +1,11 @@
 ---
-title:  スマートウォッチ 2020年夏
-date:   2020-08-21 09:04:00 +0200
-tags:	["デジタル小物"]
-slug:   "smartwatch"
 aliases:
-    - "/2020/08/21/smartwatch.html"
+- 2020/08/21/smartwatch.md
+date: 2020-08-21 09:04:00 +0200
+slug: smartwatch
+tags:
+- デジタル小物
+title: スマートウォッチ 2020年夏
 ---
 いくつか Android スマートフォンと連携するスマートウォッチを使ってきましたが、
 現在は HUAWEI の [WATCH GT2e] に落ち着いています。

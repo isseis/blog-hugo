@@ -1,10 +1,13 @@
 ---
-title:  散歩
-tags:	[日記]
-date:	2020-09-27 17:58:05 +0200
-slug: Spaziergang
 aliaes:
-  - /2020/09/27/Spaziergang.html
+- /2020/09/27/Spaziergang.html
+aliases:
+- 2020/09/27/Spaziergang.md
+date: 2020-09-27 17:58:05 +0200
+slug: Spaziergang
+tags:
+- 日記
+title: 散歩
 ---
 今週末は二日とも天気が優れず。
 雨が降っていない時間帯に近所を散歩してきましたが、

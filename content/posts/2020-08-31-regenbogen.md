@@ -1,10 +1,11 @@
 ---
-title:  虹
-tags:	["スイス生活"]
-date:	2020-08-31 19:03:05 +0200
-slug:   "regenbogen"
 aliases:
-    - /2020/08/31/regenbogen.html
+- 2020/08/31/regenbogen.md
+date: 2020-08-31 19:03:05 +0200
+slug: regenbogen
+tags:
+- スイス生活
+title: 虹
 ---
 {{< image
     path="2020/08/regenbogen/regenbogen.jpg"

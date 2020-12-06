@@ -1,10 +1,11 @@
 ---
-title:  Ciao Corona
-tags:	["スイス生活"]
-date:	2020-08-30 12:27:34 +0200
-slug:   "ciaocorona"
 aliases:
-    - /2020/08/30/ciaocorona.html
+- 2020/08/30/ciaocorona.md
+date: 2020-08-30 12:27:34 +0200
+slug: ciaocorona
+tags:
+- スイス生活
+title: Ciao Corona
 ---
 
 {{< image

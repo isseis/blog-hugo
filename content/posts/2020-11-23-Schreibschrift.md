@@ -1,10 +1,12 @@
 ---
-title:  "読書記録: アルファベットの正しい書き方"
-tags:	[外国語, 読書記録]
-date:	2020-11-23 22:05:06 +0100
-slug:   Schreibschrift
 aliases:
-    - /2020/11/23/Schreibschrift.html
+- 2020/11/23/Schreibschrift.md
+date: 2020-11-23 22:05:06 +0100
+slug: Schreibschrift
+tags:
+- 外国語
+- 読書記録
+title: '読書記録: アルファベットの正しい書き方'
 ---
 {{< amazon
     title="アルファベットの正しい書き方 ドイツ語を例にとって"

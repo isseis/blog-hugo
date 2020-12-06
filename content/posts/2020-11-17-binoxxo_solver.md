@@ -1,10 +1,11 @@
 ---
-title:  ペンシルパズル BINOXXO ソルバー
-tags:	[プログラミング]
-date:	2020-11-17 18:16:08 +0100
-slug:   inoxxo_solver
 aliases:
-    - /2020/11/17/inoxxo_solver.html
+- 2020/11/17/binoxxo_solver.md
+date: 2020-11-17 18:16:08 +0100
+slug: binoxxo_solver
+tags:
+- プログラミング
+title: ペンシルパズル BINOXXO ソルバー
 ---
 [ペンシルパズル BINOXXO](/2020/09/01/binoxxo.html) を
 [プログラムで解いて](https://github.com/isseis/blog/blob/master/assets/2020/11/binoxxo/binoxxo_solver.py) みました。

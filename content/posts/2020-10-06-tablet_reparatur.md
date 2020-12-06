@@ -1,10 +1,11 @@
 ---
-title:  タブレット Galaxy Tab S6 修理
-tags:	[デジタル小物]
-date:	2020-10-06 10:30:00 +0200
-slug:   tablet_reparatur
 aliases:
-    - /2020/10/06/tablet_reparatur.html
+- 2020/10/06/tablet_reparatur.md
+date: 2020-10-06 10:30:00 +0200
+slug: tablet_reparatur
+tags:
+- デジタル小物
+title: タブレット Galaxy Tab S6 修理
 ---
 Android タブレット Galaxy Tab S6 の画面を割ってしまったので、
 修理に出しました。

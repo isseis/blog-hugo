@@ -1,10 +1,11 @@
 ---
-title:  "Re: 語学の入門における語彙力とAnkiDroidについて"
-date:   2020-08-14 20:34:00 +0200
-tags:	["外国語"]
-slug:   "how-should-use-ankidroid"
 aliases:
-        "/2020/08/14/how-should-use-ankidroid.html"
+- 2020/08/14/how-should-use-ankidroid.md
+date: 2020-08-14 20:34:00 +0200
+slug: how-should-use-ankidroid
+tags:
+- 外国語
+title: 'Re: 語学の入門における語彙力とAnkiDroidについて'
 ---
 
 有野さんの blog 記事「[語学の入門における語彙力とAnkiDroidについて](https://karino2.github.io/2020/07/26/vocab_ankidroid_intro.html)」を読んで、

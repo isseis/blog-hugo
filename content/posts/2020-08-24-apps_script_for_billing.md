@@ -1,10 +1,11 @@
 ---
-title:  Google スプレッドシートで請求書作成
-tags:	["プログラミング"]
-date:	2020-08-24 17:45:41 +0200
-slug: "apps_script_for_billing"
 aliases:
-    - /2020/08/24/apps_script_for_billing.html
+- 2020/08/24/apps_script_for_billing.md
+date: 2020-08-24 17:45:41 +0200
+slug: apps_script_for_billing
+tags:
+- プログラミング
+title: Google スプレッドシートで請求書作成
 ---
 私の子供は週に一度、
 日本語を学ぶための日本語学校に通っています。

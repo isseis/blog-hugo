@@ -1,10 +1,11 @@
 ---
-title:  Blog を Netlify にホスティング
-tags:	["blog"]
-date:	2020-09-20 21:28:06 +0200
-slug:   blog-hosting-on-netlify
 aliases:
-    - /2020/09/20/blog-hosting-on-netlify.html
+- 2020/09/20/blog-hosting-on-netlify.md
+date: 2020-09-20 21:28:06 +0200
+slug: blog-hosting-on-netlify
+tags:
+- blog
+title: Blog を Netlify にホスティング
 ---
 ブログのホスティング先を [GitHub Pages](https://pages.github.com/) から [Netlify](https://www.netlify.com/) に切り替えました。
 評判が良い Netlify を実際に試して評価するため。

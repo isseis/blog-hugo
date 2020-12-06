@@ -1,10 +1,11 @@
 ---
-title:  "ドイツ語読解: チューリッヒが店舗内でのマスク着用を義務化"
-tags:	["外国語"]
-date:	2020-08-26 19:33:43 +0200
-slug: "maskenpflicht-in-zurich"
 aliases:
-    - /2020/08/26/maskenpflicht-in-zurich.html
+- 2020/08/26/maskenpflicht-in-zurich.md
+date: 2020-08-26 19:33:43 +0200
+slug: maskenpflicht-in-zurich
+tags:
+- 外国語
+title: 'ドイツ語読解: チューリッヒが店舗内でのマスク着用を義務化'
 ---
 ## 題材
 日刊新聞 Neue Zürcher Zeitung（ノイエ・チュルヒャー・ツァイトゥング）から。

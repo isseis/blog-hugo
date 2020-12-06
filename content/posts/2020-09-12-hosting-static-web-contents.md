@@ -1,10 +1,12 @@
 ---
-title:  静的 Web コンテンツ作成・配信環境
-tags:	["プログラミング", "blog"]
-date:	2020-09-12 17:40:42 +0200
-slug:   "hosting-static-web-contents"
 aliases:
-    - /2020/09/12/hosting-static-web-contents.html
+- 2020/09/12/hosting-static-web-contents.md
+date: 2020-09-12 17:40:42 +0200
+slug: hosting-static-web-contents
+tags:
+- プログラミング
+- blog
+title: 静的 Web コンテンツ作成・配信環境
 ---
 久しぶりにブログ（というか往年の Web 日記というか）を書き始めて、
 あらためて静的なコンテンツを作成し Web で公開するための環境について調べています。

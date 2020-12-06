@@ -1,10 +1,11 @@
 ---
-title:  ドイツ首相 電話会議議事録 2020-08-27
-tags:	["外国語"]
-date:	2020-08-31 11:28:22 +0200
-slug:   "telefonschaltkonferenz-der-bundeskanzlerin"
 aliases:
-    - /2020/08/31/rtelefonschaltkonferenz-der-bundeskanzlerinegenbogen.html
+- 2020/08/31/telefonschaltkonferenz-der-bundeskanzlerin.md
+date: 2020-08-31 11:28:22 +0200
+slug: telefonschaltkonferenz-der-bundeskanzlerin
+tags:
+- 外国語
+title: ドイツ首相 電話会議議事録 2020-08-27
 ---
 <style type="text/css">
     .sub { color: blue; }

@@ -1,10 +1,12 @@
 ---
-title:  "Anki を使った漢字の勉強（小学生）"
-tags:	["教育", "海外在住"]
-date:	2020-09-26 12:05:14 +0200
-slug:   ankidroid_for_kanji
 aliases:
-    - /2020/09/26/ankidroid_for_kanji.html
+- 2020/09/26/ankidroid_for_kanji.md
+date: 2020-09-26 12:05:14 +0200
+slug: ankidroid_for_kanji
+tags:
+- 教育
+- 海外在住
+title: Anki を使った漢字の勉強（小学生）
 ---
 小学三年生の息子が漢字を覚えるために、
 私がドイツ語学習で使っているフラッシュカードアプリ [Anki](https://apps.ankiweb.net/) を使い始めました。

@@ -1,11 +1,12 @@
 ---
-title:  スイスの健康保険制度
-tags:	["スイス生活"]
-date:	2020-09-08 17:06:05 +0200
-toc:    true
-slug:   "krankenversicherung-in-der-schweiz"
 aliases:
-    - /2020/09/08/krankenversicherung-in-der-schweiz.html
+- 2020/09/08/krankenversicherung-in-der-schweiz.md
+date: 2020-09-08 17:06:05 +0200
+slug: krankenversicherung-in-der-schweiz
+tags:
+- スイス生活
+title: スイスの健康保険制度
+toc: true
 ---
 {{< image
     path="2020/09/krankenversicherung-in-der-schweiz/hokensyou.png"

@@ -1,10 +1,11 @@
 ---
-title:  Visual Studio Code を Chromebook で使う方法と、Chrome OS のレンダリングパイプライン
-tags:   ["プログラミング"]
-date:	2020-09-16 21:25:29 +0200
-slug:   visual-studio-code-on-chromebook
 aliases:
-    - /2020/09/16/visual-studio-code-on-chromebook.html
+- 2020/09/16/visual-studio-code-on-chromebook.md
+date: 2020-09-16 21:25:29 +0200
+slug: visual-studio-code-on-chromebook
+tags:
+- プログラミング
+title: Visual Studio Code を Chromebook で使う方法と、Chrome OS のレンダリングパイプライン
 ---
 Chromebook で使えるエディタを探していたところ、
 [Visual Stuido Code](https://code.visualstudio.com/) が Chrome OS 上の Linux (beta) で使えることが判明。

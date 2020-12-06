@@ -1,10 +1,11 @@
 ---
-title:  ブロク作成環境を Jekyll に変更
-date:   2020-08-13 00:16:00 +0200
-tags:	[blog]
-slug:   "welcome-to-jekyll"
 aliases:
-    - /2020/08/13/welcome-to-jekyll.html
+- 2020/08/13/welcome-to-jekyll.md
+date: 2020-08-13 00:16:00 +0200
+slug: welcome-to-jekyll
+tags:
+- blog
+title: ブロク作成環境を Jekyll に変更
 ---
 これまで Web で公開したい文書は [Blogger] で書いていましたが、
 マークダウン記法が使える [Jekyll] と [GitHub Pages] に移行することにしました。

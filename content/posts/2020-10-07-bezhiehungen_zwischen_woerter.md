@@ -1,10 +1,11 @@
 ---
-title:  ことばのつながり
-tags:	[教育]
-date:	2020-10-07 20:19:46 +0200
-slug:	bezhiehungen_zwischen_woerter
 aliases:
-   - /2020/10/17/bezhiehungen_zwischen_woerter.html
+- 2020/10/07/bezhiehungen_zwischen_woerter.md
+date: 2020-10-07 20:19:46 +0200
+slug: bezhiehungen_zwischen_woerter
+tags:
+- 教育
+title: ことばのつながり
 ---
 国語の課題で、
 この文章の言葉のつながりを矢印で書きましょうという問題がでていました。

@@ -1,10 +1,12 @@
 ---
-title:  "読書記録: Neues vom Räuber Hotzenplotz"
-tags:	[教育, 読書記録]
-date:	2020-11-05 18:01:22 +0100
-slug:   Neues-vom-Raeuber-Hotzenplotz
 aliases:
-    - /2020/11/05/Neues-vom-Raeuber-Hotzenplotz.html
+- 2020/11/05/Neues-vom-Raeuber-Hotzenplotz.md
+date: 2020-11-05 18:01:22 +0100
+slug: Neues-vom-Raeuber-Hotzenplotz
+tags:
+- 教育
+- 読書記録
+title: '読書記録: Neues vom Räuber Hotzenplotz'
 ---
 小学三年生の子供と読んでいた大泥棒ホッツェンプロッツのシリーズ第二巻、
 Neues vom Räuber Hotzenplotz（原書）が読み終わりました。

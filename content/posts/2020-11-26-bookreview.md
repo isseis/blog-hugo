@@ -1,10 +1,11 @@
 ---
-title:  "読書記録: 歪んだ正義"
-tags:	[読書記録]
-date:	2020-11-26 23:29:19 +0100
-slug:   bookreview
 aliases:
-    - /2020/11/26/bookreview.html
+- 2020/11/26/bookreview.md
+date: 2020-11-26 23:29:19 +0100
+slug: bookreview
+tags:
+- 読書記録
+title: '読書記録: 歪んだ正義'
 ---
 {{< amazon
     title="歪んだ正義　「普通の人」がなぜ過激化するのか"

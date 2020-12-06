@@ -1,10 +1,12 @@
 ---
-title:  "読書記録: 世界の言語と日本語 改訂版"
-date:   2020-08-16 11:32:00 +0200
-tags:	["外国語", "読書記録"]
-slug:   "bookreview"
 aliases:
-    - "/2020/08/16/bookreview.html"
+- 2020/08/16/bookreview.md
+date: 2020-08-16 11:32:00 +0200
+slug: bookreview
+tags:
+- 外国語
+- 読書記録
+title: '読書記録: 世界の言語と日本語 改訂版'
 ---
 {{< amazon
     title="世界の言語と日本語 改訂版 言語類型論から見た日本語"

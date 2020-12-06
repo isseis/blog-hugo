@@ -1,10 +1,11 @@
 ---
-title:  スイスにおける新型コロナウイルス感染症の状況
-tags:	[スイス生活]
-date:	2020-11-01 11:02:00 +0200
-slug:   covid19-in-der-schweiz
 aliases:
-    - /2020/11/01/covid19-in-der-schweiz.html
+- 2020/11/01/covid19-in-der-schweiz.md
+date: 2020-11-01 11:02:00 +0200
+slug: covid19-in-der-schweiz
+tags:
+- スイス生活
+title: スイスにおける新型コロナウイルス感染症の状況
 ---
 スイスは、
 10月初旬までは欧州の中では感染者数が比較的少なく状況が落ち着いていたのですが、

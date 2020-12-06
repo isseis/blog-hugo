@@ -1,10 +1,11 @@
 ---
-title:  小児用メガネを作りました
-tags:	["スイス生活"]
-date:	2020-08-27 13:40:22 +0200
-slug:   "kinderbrillen"
 aliases:
-    - /2020/08/27/kinderbrillen.html
+- 2020/08/27/kinderbrillen.md
+date: 2020-08-27 13:40:22 +0200
+slug: kinderbrillen
+tags:
+- スイス生活
+title: 小児用メガネを作りました
 ---
 ![小児用メガネフレーム](/assets/2020/08/kinderbrille/MIKA-RDTQ.jpg)
 

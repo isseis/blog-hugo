@@ -1,10 +1,12 @@
 ---
-title:  小学校の学習目標到達度テスト
-tags:	[教育, 日記]
-date:	2020-09-28 22:42:01 +0200
-slug:   lernzielkontrolle
 aliases:
-    - /2020/09/28/lernzielkontrolle.html
+- 2020/09/28/lernzielkontrolle.md
+date: 2020-09-28 22:42:01 +0200
+slug: lernzielkontrolle
+tags:
+- 教育
+- 日記
+title: 小学校の学習目標到達度テスト
 ---
 チューリッヒでは夏休み明けから新学年が始まりましたが、
 来週から二週間の秋休みに入ります。

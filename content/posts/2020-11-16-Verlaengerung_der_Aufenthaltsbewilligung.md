@@ -1,10 +1,11 @@
 ---
-title:  滞在許可証更新
-tags:	[スイス生活]
-date:	2020-11-16 09:57:37 +0100
-slug:   Verlaengerung_der_Aufenthaltsbewilligung
 aliases:
-    - /2020/11/16/Verlaengerung_der_Aufenthaltsbewilligung.html
+- 2020/11/16/Verlaengerung_der_Aufenthaltsbewilligung.md
+date: 2020-11-16 09:57:37 +0100
+slug: Verlaengerung_der_Aufenthaltsbewilligung
+tags:
+- スイス生活
+title: 滞在許可証更新
 ---
 毎年恒例のスイスの滞在許可証更新時期が来たので、
 村役場で更新申請しました。

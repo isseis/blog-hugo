@@ -1,10 +1,11 @@
 ---
-title:  "Re^3: 語学の入門における語彙力とAnkiDroidについて"
-tags:	["外国語"]
-date:	2020-08-22 22:05:07 +0200
-slug:   "how-should-use-ankidroid2"
 aliases:
-    - /2020/08/2/how-should-use-ankidroid2.html
+- 2020/08/22/how-should-use-ankidroid2.md
+date: 2020-08-22 22:05:07 +0200
+slug: how-should-use-ankidroid2
+tags:
+- 外国語
+title: 'Re^3: 語学の入門における語彙力とAnkiDroidについて'
 ---
 AnkiDroid の使い方について、
 有野さんの質問への返答です。

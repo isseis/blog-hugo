@@ -1,10 +1,11 @@
 ---
-title:  主語と述語
-tags:	[教育]
-date:	2020-10-05 01:36:49 +0200
-slug:   subjekt_und_praedikat
 aliases:
-    - /2020/10/05/subjekt_und_praedikat.html
+- 2020/10/05/subjekt_und_praedikat.md
+date: 2020-10-05 01:36:49 +0200
+slug: subjekt_und_praedikat
+tags:
+- 教育
+title: 主語と述語
 ---
 日本語学校の国語の宿題で「次の文の主語を丸で囲みなさい」という問題が出ていました。
 

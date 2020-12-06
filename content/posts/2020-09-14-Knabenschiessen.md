@@ -1,11 +1,12 @@
 ---
-title:  長い週末 (Knabenschiessen)
-tags:	["日記"]
-header:
-date:	2020-09-14 21:07:30 +0200
-slug:   Knabenshiessen
 aliases:
-    - /2020/09/14/Knabenshiessen.html
+- 2020/09/14/Knabenschiessen.md
+date: 2020-09-14 21:07:30 +0200
+header: null
+slug: Knabenschiessen
+tags:
+- 日記
+title: 長い週末 (Knabenschiessen)
 ---
 チューリッヒ州では、
 9月14日（月）は少年射撃大会 (Knabenshiessen) で学校がお休みなので、

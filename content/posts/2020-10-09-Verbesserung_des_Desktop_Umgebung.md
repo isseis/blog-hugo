@@ -1,10 +1,11 @@
 ---
-title:  "デスクトップ環境（物理）見直し"
-tags:	[日記]
-date:	2020-10-09 14:01:00 +0200
-slug: Verbesserung_des_Desktop_Umgebung
 aliases:
-  - /2020/10/19/Verbesserung_des_Desktop_Umgebung.html
+- 2020/10/09/Verbesserung_des_Desktop_Umgebung.md
+date: 2020-10-09 14:01:00 +0200
+slug: Verbesserung_des_Desktop_Umgebung
+tags:
+- 日記
+title: デスクトップ環境（物理）見直し
 ---
 自宅で仕事をするようになって机の上が混雑してきたので、
 会社から出た予算を使って整理しました。

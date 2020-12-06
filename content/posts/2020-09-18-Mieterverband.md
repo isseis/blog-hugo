@@ -1,10 +1,11 @@
 ---
-title:  "借家人協会（Mieterinnen- und Mieterverband）に加入しました"
-tags:	["スイス生活"]
-date:	2020-09-18 13:55:02 +0200
-slug:   Mieterverband
 aliases:
-    - /2020/09/18/Mieterverband.html
+- 2020/09/18/Mieterverband.md
+date: 2020-09-18 13:55:02 +0200
+slug: Mieterverband
+tags:
+- スイス生活
+title: 借家人協会（Mieterinnen- und Mieterverband）に加入しました
 ---
 スイスの賃借人協会 ([Mieterinnen- und Mieterverband](https://www.mieterverband.ch/), 略称 MV) に加入しました。
 賃貸住宅を借りている人のための協会で、

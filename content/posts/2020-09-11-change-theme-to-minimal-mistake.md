@@ -1,10 +1,11 @@
 ---
-title:  ブログのデザインテーマを minimal-mistakes に変更
-tags:   ["blog"]
-date:	2020-09-11 01:42:16 +0200
-slug:   "change-theme-to-minimal-mistake"
 aliases:
-    - /2020/09/11/change-theme-to-minimal-mistake.html
+- 2020/09/11/change-theme-to-minimal-mistake.md
+date: 2020-09-11 01:42:16 +0200
+slug: change-theme-to-minimal-mistake
+tags:
+- blog
+title: ブログのデザインテーマを minimal-mistakes に変更
 ---
 このブログは [Jekyll](https://jekyllrb.com/) を使って作成していますが、
 レイアウトテーマを標準の minima から [minimal-mistakes](https://mmistakes.github.io/minimal-mistakes/) に変更しました。

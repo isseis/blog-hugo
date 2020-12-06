@@ -1,10 +1,11 @@
 ---
-title:  Android 11 公開
-tags:	["プログラミング"]
-date:	2020-09-09 15:39:10 +0200
-slug:   "android11-release"
 aliases:
-    - /2020/09/09/android11-release.html
+- 2020/09/09/android11-release.md
+date: 2020-09-09 15:39:10 +0200
+slug: android11-release
+tags:
+- プログラミング
+title: Android 11 公開
 ---
 [Android 11](https://www.android.com/android-11/) が公開されましたが、
 私が関わった内容の一部を紹介。
