@@ -7,6 +7,7 @@ addons:
 
 script:
 - hugo
+- cp public/index.xml public/feed.xml
 
 deploy:
   provider: firebase
