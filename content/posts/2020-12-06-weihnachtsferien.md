@@ -4,7 +4,6 @@ date: 2020-12-06T22:02:26+01:00
 slug: "weihnachtsferien"
 tags:
 - スイス生活
-draft: true
 ---
 冬休みに向けて、
 欧州での新型コロナウイルスの現状、
