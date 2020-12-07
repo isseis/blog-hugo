@@ -68,7 +68,7 @@ tags:
 
 新型コロナウイルスの蔓延により病床が不足したり、
 濃厚接触者の追跡が十分に行えなくなった場合には、
-週単位でスキー場が閉鎖されます。
+州単位でスキー場が閉鎖されます。
 また特定のスキー場で保護規則が十分に守られていない場合、
 そのスキー場に対する営業許可が取り消される可能性があります。
 
@@ -84,7 +84,7 @@ tags:
 
 参考: [Diese Nachbarländer wollen keinen Schweizer Skitourismus (SRF)](https://www.srf.ch/news/schweiz/streit-um-offene-skigebiete-diese-nachbarlaender-wollen-keinen-schweizer-skitourismus)
 
-なお隣国からスイスにスキーをしに来ることも非現実的です。
+なお隣国からスイスにスキーをしに来ることは非現実的です。
 いずれの国でもスイスは新型コロナウイルス蔓延国として扱われており、
 スイス滞在後に帰国した場合、
 七から十日の自己隔離が義務付けらるためです。
