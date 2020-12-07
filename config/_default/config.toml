@@ -12,7 +12,6 @@ paginate = 5
 [params]
   twitter = "issei_swe"
   github = "isseis"
-  author = "鈴木一生"
 
 [markup]
   [markup.goldmark]
@@ -20,14 +19,19 @@ paginate = 5
       unsafe = true
 
 [[menu.main]]
+  name = "Search"
+  url = "https://www.google.co.jp/search?q=site:blog2.issei.org"
+  weight = 2
+
+[[menu.main]]
   name = "Web"
   url = "https://www.issei.org/"
-  weight = 1
+  weight = 2
 
 [[menu.main]]
   name = "About"
   url = "/about"
-  weight = 2
+  weight = 3
 
 [[menu.main]]
   name = "Tags"
