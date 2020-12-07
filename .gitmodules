@@ -1,4 +1,0 @@
-[submodule "themes/pickles"]
-	path = themes/pickles
-	url = git@github.com:isseis/hugo_theme_pickles.git
-	branch = feature/custom_comment
