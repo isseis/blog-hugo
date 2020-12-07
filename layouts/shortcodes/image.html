@@ -3,12 +3,10 @@
 {{- $caption := .Get "caption" -}}
 {{- $caption_on_image := .Get "caption_on_image" -}}
 <div style="position: relative; margin-bottom: 2em;">
-    <img src="/assets/{{ $path }}" data-zoomable="true" {{- if $style -}} style="{{ $style }}" {{- end -}}
+    <img src="/assets/{{ $path }}" data-zoomable="true"
+        {{- if $style -}} style="{{ $style }}" {{- end -}}
         {{- if $caption -}} alt="{{ $caption }}" {{- end -}} />
     {{- if and ($caption) ($caption_on_image) -}}
-    <p style="position:absolute; bottom: 0; right: 0; margin-bottom: .3em; padding: 2px 5px 2px 5px; color: #fff; background: #000; opacity:
-        0.5; font-size: 1.4em;">
-        {{ $caption }}
-    </p>
+    <span class="medium-zoom-caption">{{ $caption }}</span>
     {{- end -}}
 </div>
