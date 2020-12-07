@@ -8,7 +8,7 @@ tags:
 title: ペンシルパズル BINOXXO ソルバー
 ---
 [ペンシルパズル BINOXXO](/2020/09/01/binoxxo.html) を
-[プログラムで解いて](https://github.com/isseis/blog/blob/master/assets/2020/11/binoxxo/binoxxo_solver.py) みました。
+[プログラムで解いて](https://github.com/isseis/binoxxo-solver/blob/master/binoxxo_solver.py) みました。
 
 ## アルゴリズム（人間用）
 
@@ -71,7 +71,7 @@ title: ペンシルパズル BINOXXO ソルバー
 これで作れる組み合わせを列挙すると、
 次のようになります。
 人間には面倒ですが、
-コンピューターなら全パターン列挙は [一瞬](https://github.com/isseis/blog/blob/0af6cc6f353cec6325fe39af6e3900d5e3454e61/assets/2020/11/binoxxo/binoxxo_solver.py#L177) です。
+コンピューターなら全パターン列挙は [一瞬](https://github.com/isseis/binoxxo-solver/blob/a39874a9cd262138119af75720e572ff604f923d/binoxxo_solver.py#L177) です。
 
 | 行 | 条件１を満たすか |
 | - | :-: |
