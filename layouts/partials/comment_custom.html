@@ -1,24 +1,34 @@
+{{ with $.Param "getform" }}
+{{ if in .for $.Page.Type }}
 <div class="getform-contact">
     <h2 class="getform-title">コメントを送る</h2>
     <p class="getform-info">
         お気軽にお送りください。
         お返事はメールアドレス入力があればメールで、ない場合はブログ上で行うことがあります。
     </p>
-    <form accept-charset="UTF-8" action="https://getform.io/f/a874702f-ed84-4de6-b978-34586da4d849" method="POST" enctype="multipart/form-data">
+    <form accept-charset="UTF-8" action="https://getform.io/f/{{ .endpoint }}" method="POST"
+        enctype="multipart/form-data">
         <div class="field">
             <label class="label" for="getform-name">お名前</label>
-            <input type="text" name="name" class="getform-control" id="getform-name" placeholder="お名前" required="required">
+            <input type="text" name="name" class="getform-control" id="getform-name" placeholder="お名前"
+                required="required">
         </div>
         <div class="field">
             <label class="label" for="getform-mail">メールアドレス</label>
-            <input type="email" name="email" class="getform-control" id="getform-mail" aria-describedby="emailHelp" placeholder="返信にメールが望ましい場合">
+            <input type="email" name="email" class="getform-control" id="getform-mail" aria-describedby="emailHelp"
+                placeholder="返信にメールが望ましい場合">
         </div>
         <div class="field">
             <label class="label" for="getform-text">本文</label>
-            <textarea name="text" class="getform-textarea" id="getform-text" spellcheck="false" placeholder="本文" required="required"></textarea>
+            <textarea name="text" class="getform-textarea" id="getform-text" spellcheck="false" placeholder="本文"
+                required="required"></textarea>
         </div>
         <input type="hidden" id="url" name="url">
+        {{ if .recaptcha_id }}
         <input type="hidden" id="captchaResponse" name="g-recaptcha-response">
-        <button type="submit"  class="getform-submit">コメントを送る</button>
+        {{ end }}
+        <button type="submit" class="getform-submit">コメントを送る</button>
     </form>
 </div>
+{{ end }}
+{{ end }}

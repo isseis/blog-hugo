@@ -1,4 +1,8 @@
+{{ with $.Param "getform" }}
+{{ if and (.endpoint) (.recaptcha_id) (in .for $.Page.Type) }}
 <p class="recaptcha-policy">このサイトはreCAPTCHAとGoogleによって保護されています。
 	<a href="https://policies.google.com/privacy" target="_blank">プライバシーポリシー</a> および
 	<a href="https://policies.google.com/terms" target="_blank">利用規約</a>が適用されます。
 </p>
+{{ end }}
+{{ end }}
