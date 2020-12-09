@@ -15,7 +15,7 @@ paginate = 5
   [params.getform]
     endpoint = "a874702f-ed84-4de6-b978-34586da4d849"
     recaptcha_id = "6LcWLsoZAAAAAEXpuHDLCIpM5bemiSMqQsON-ZND"
-    for = ['posts']
+    for = ['about', 'posts']
 
 [markup]
   [markup.goldmark]
