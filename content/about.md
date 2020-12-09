@@ -9,3 +9,4 @@ permalink: /about/
 鈴木一生のブログです。
 
 - [2020年5月以前の記事](https://blog.issei.org/)
+- [チューリッヒ生活記述](https://www.issei.org/)

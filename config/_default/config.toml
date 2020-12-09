@@ -23,21 +23,21 @@ paginate = 5
       unsafe = true
 
 [[menu.main]]
-  name = "Search"
-  url = "https://www.google.co.jp/search?q=site:blog2.issei.org"
-  weight = 2
-
-[[menu.main]]
-  name = "Web"
-  url = "https://www.issei.org/"
-  weight = 2
-
-[[menu.main]]
   name = "About"
   url = "/about"
-  weight = 3
+  weight = 1
+
+[[menu.main]]
+  name = "Search"
+  url = "https://www.google.co.jp/search?q=site:blog2.issei.org"
+  weight = 1
 
 [[menu.main]]
   name = "Tags"
   url = "/tags"
-  weight = 4
+  weight = 3
+
+[[menu.main]]
+  name = "Admin"
+  url = "/admin/"
+  weight = 10
