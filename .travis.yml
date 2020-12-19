@@ -1,9 +1,11 @@
-# Travis CI
+os: linux
+language: generic
 
 dist: focal
 addons:
   snaps:
-  - hugo
+  - name: hugo
+    channel: extended
 
 script:
 - hugo
