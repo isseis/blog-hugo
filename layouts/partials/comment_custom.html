@@ -10,17 +10,16 @@
         enctype="multipart/form-data">
         <div class="field">
             <label class="label" for="getform-name">お名前</label>
-            <input type="text" name="name" class="getform-control" id="getform-name" placeholder="お名前"
+            <input type="text" name="name" class="getform-text" id="getform-name" placeholder="お名前"
                 required="required">
         </div>
         <div class="field">
             <label class="label" for="getform-mail">メールアドレス</label>
-            <input type="email" name="email" class="getform-control" id="getform-mail" aria-describedby="emailHelp"
-                placeholder="返信にメールが望ましい場合">
+            <input type="email" name="email" class="getform-text" id="getform-mail" placeholder="返信にメールが望ましい場合">
         </div>
         <div class="field">
-            <label class="label" for="getform-text">本文</label>
-            <textarea name="text" class="getform-textarea" id="getform-text" spellcheck="false" placeholder="本文"
+            <label class="label" for="getform-body">本文</label>
+            <textarea name="text" class="getform-textarea" id="getform-body" spellcheck="false" placeholder="本文"
                 required="required"></textarea>
         </div>
         <input type="hidden" id="url" name="url">
