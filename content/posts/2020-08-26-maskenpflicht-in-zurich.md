@@ -4,7 +4,7 @@ aliases:
 date: 2020-08-26 19:33:43 +0200
 slug: maskenpflicht-in-zurich
 tags:
-- 外国語
+- ドイツ語
 title: 'ドイツ語読解: チューリッヒが店舗内でのマスク着用を義務化'
 ---
 ## 題材

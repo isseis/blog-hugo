@@ -4,7 +4,7 @@ aliases:
 date: 2020-08-31 11:28:22 +0200
 slug: telefonschaltkonferenz-der-bundeskanzlerin
 tags:
-- 外国語
+- ドイツ語
 title: ドイツ首相 電話会議議事録 2020-08-27
 ---
 <style type="text/css">

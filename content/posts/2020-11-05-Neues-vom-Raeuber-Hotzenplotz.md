@@ -6,6 +6,7 @@ slug: Neues-vom-Raeuber-Hotzenplotz
 tags:
 - 教育
 - 読書記録
+- ドイツ語
 title: '読書記録: Neues vom Räuber Hotzenplotz'
 ---
 小学三年生の子供と読んでいた大泥棒ホッツェンプロッツのシリーズ第二巻、

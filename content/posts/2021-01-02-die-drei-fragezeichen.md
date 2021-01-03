@@ -5,6 +5,7 @@ slug: "die-drei-fragezeichen"
 tags:
 - 教育
 - 読書記録
+- ドイツ語
 ---
 小学２年生の子供と音読していた「Die drei ??? kids, Vorsicht, Zaubertinte!」読了。
 

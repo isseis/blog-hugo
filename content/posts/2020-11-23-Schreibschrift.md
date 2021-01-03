@@ -4,7 +4,7 @@ aliases:
 date: 2020-11-23 22:05:06 +0100
 slug: Schreibschrift
 tags:
-- 外国語
+- ドイツ語
 - 読書記録
 title: '読書記録: アルファベットの正しい書き方'
 ---
