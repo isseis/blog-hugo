@@ -46,7 +46,7 @@ tags:
 | 鉤爪          | die Klaule        |
 | 裂肉歯        | der Reißzahn      |
 | 針葉樹        | die Konifere      |
-| シダ（植物）  | der Fahn          |
+| シダ（植物）  | der Farn          |
 | 切り株        | der Baumstumpf    |
 | 肉片          | das Fleischfetzen |
 
