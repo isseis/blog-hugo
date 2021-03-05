@@ -39,6 +39,12 @@ tags:
 ゲームとは関係ないオリジナルストーリーとのことですが、
 キャラクターの性格やゲーム中での能力がストーリーにうまく盛り込まれている。
 
+## [ガリバー旅行記 (10歳までに読みたい世界名作)](https://www.amazon.co.jp/dp/4052040457/)
+
+子供と毎日１０〜１５分ずつ、一文交代で音読。
+
+子供向けに編集された、ガリバー旅行記の抄訳版。小人の国と巨人の国の話のみ。
+
 ## [Das geheime Dinoversum X-tra 2: Gefahr für den Triceratops](https://www.loewe-verlag.de/titel-0-0/das_geheime_dinoversum_xtra_2_gefahr_fuer_den_triceratops-8341/)
 
 小学３年生の子供と読んでいた «Das geheime Dinoversum Xtra» シリーズの第２巻 «Gefahr für den Triceratops» を読了。
