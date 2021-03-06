@@ -149,7 +149,7 @@ sich hangeln はぶらさがる感じが出ます。
 木登りも含めて一般に「よじのぼる」だと (er)klettern でしょう。
 
 durchfahren は感情が主語、目的語が人。
-«Ein Schreck durchfür mich» を日本語に直訳すると「恐怖が私を襲った」になる。
+«Ein Schreck durchfuhr mich» を日本語に直訳すると「恐怖が私を襲った」になる。
 
 ausholen は、この用法だと自動詞で目的語を取らない。
 実際には「（殴るために）腕を振り上げて構えた」というように構えるものを明示することが多いので、
