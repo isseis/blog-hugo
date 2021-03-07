@@ -56,7 +56,7 @@ tags:
 
 ## [Beast Quest 2: Sepron, König der Meere](https://www.loewe-verlag.de/titel-0-0/beast_quest_2_sepron_koenig_der_meere-3409/)
 
-上の本に続いて、学３年生の子供と音読。
+上の本に続いて、小学３年生の子供と音読。
 
 剣と魔法の物語・第２巻。王国を守るはずの６体の獣が悪の魔法使いに操られ、逆に王国に厄災をもたらしている。
 竜を解放する第１巻に引き続き、
