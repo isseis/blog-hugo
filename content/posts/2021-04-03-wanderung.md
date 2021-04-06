@@ -40,5 +40,5 @@ Buchenegg にも数件レストランがありますが、
 
 {{< image
     path="2021/04/03/20210402_122925.jpg"
-    caption="Felsenegg – Buchenegg "
+    caption="Felsenegg – Buchenegg"
     caption_on_image="true" >}}
