@@ -7,70 +7,8 @@ GitHub にコンテンツを push すると、
 hugo を使ってサイトをビルドし、
 その結果を Firebase Hosting にデプロイする。
 
-- [Travis CI](https://travis-ci.com/)
 - [Firebase コンソール](http://console.firebase.google.com/)
-
-## Travis CI
-
-### Travis CI が GitHub リポジトリにアクセスできるようにする
-
-https://github.com/settings/installations/11971036
-
-### Travis CLI をインストール
-
-Ruby を インストールして、次のコマンドを実行。
-```sh
-gem install travis
-```
-
-プレインストールされている Ruby のバージョンが古い場合には、
-事前に [rbenv](https://github.com/rbenv/rbenv) を使って新しいバージョンをインストールしておく。
-
-### 設定ファイル
-
-.travis.yml
-```yml
-dist: focal
-addons:
-  snaps:
-  - hugo
-script:
-- hugo
-- cp public/index.xml public/feed.xml
-```
-
-最後の行は後方互換性維持のため。
-jekyll は feed.xml というファイル名で RSS フィードを出力するので、
-それを読むように設定している人のために。
-
-### 通知
-
-公式ドキュメント [Configuring Slack notifications](https://docs.travis-ci.com/user/notifications/#configuring-slack-notifications) 参照。
-
-
-#### SLack app に Travis CI を追加
-
-* ビルドの成否に関わらず通知
-* 通知にはメールではなく Slack を使う
-
-```yml
-notifications:
-  slack:
-    on_success: always
-    on_failure: always
-  email: flase
-```
-
-Travis CI から Slack のチャンネルにポストするために必要な Token を生成する。
-
-1. [Slack app directory - Travis CI](https://isseiworkspace.slack.com/apps/A0F81FP4N-travis-ci) で、
-左にある Zu Slack hinzufügen ボダンをクリック。
-2. メッセージをポストするチャンネルを選択して Travis CI-Integration hinzufügen をクリック。
-3. Token を暗号化して .travis.yml に追加。
-
-```sh
-travis encrypt "<account>:<token>#channel" --add notifications.slack.rooms
-```
+- [Buddy](https://buddy.works/)
 
 ## Firebase
 
@@ -117,23 +55,30 @@ firebase.json
 }
 ```
 
-### ビルド後に Firebase Hosting にデプロイする
+コマンドラインから `firebase deploy --non-interactive` と実行することで、
+`public` ディレクトリ以下をデプロイできることを確認しておく。
 
-```yml
-deploy:
-  provider: firebase
-  skip_cleanup: true
-```
+## Buddy
 
-公式ドキュメント [Generating your Firebase token](https://docs.travis-ci.com/user/deployment/firebase/#generating-your-firebase-token) にしたがって、
-git リポジトリで次のコマンドを実行してアクセストークンを作成。
+Webから対話的に設定できる。
 
-```sh
-firebase login:ci
-```
-
-暗号化して .travis.yml に追加。
-
-```sh
-travis encrypt "TOKEN" --add
-```
+1. Buddy から GitHub リポジトリへのアクセスを許可する。
+1. プロジェクトを新規作成し、Git Hosting Provider として先に登録した GitHub、その中のリポジトリとしてこのブログの blog-hugo を選択する。
+1. Pipeline に Hugo でのビルドプロセスを登録する。
+    1. Actions に Hugo を追加。
+    1. Environment タブを開き、hugo のインストールスクリプトを編集。新しいバージョンをインストールするように。
+    ```sh
+    apt-get update && apt-get install -y wget
+    wget -O hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.82.1/hugo_0.82.1_Linux-64bit.deb
+    dpkg -i hugo.deb
+    rm hugo.deb
+    ```
+    1. Run タブを開きビルドスクリプトを編集する。デフォルトだと `hugo` だけなので、コマンドラインオプションを追加して不要なファイル削除とミニフィケーションを有効に。二行目はこのブログの RSS の URL が途中で変わったことに対する対応なので、通常は不要。
+    ```sh
+    hugo --cleanDestinationDir --minify
+    cp public/index.xml public/feed.xml
+    ```
+1. Pipeline に Firebase へのデプロイプロセスを登録。
+    1. Actions に Firebase を追加
+    1. Firebase アカウントを登録（コマンドラインツールを使ってアクセストークンを取得して登録）
+    1. Firebase project に blog-hugo-issei を設定
