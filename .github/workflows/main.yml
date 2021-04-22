@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
@@ -27,3 +27,10 @@ jobs:
         run: hugo --cleanDestinationDir --minify
       
       - run: cp public/index.xml public/feed.xml
+      
+      - name: Deploy
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+          expires: 30d
+          projectId: blog-hugo-issei
