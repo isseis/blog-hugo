@@ -26,4 +26,4 @@ jobs:
       - name: Build
         run: hugo --cleanDestinationDir --minify
       
-      - run: public/index.xml public/feed.xml
+      - run: cp public/index.xml public/feed.xml
