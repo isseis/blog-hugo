@@ -1,4 +1,4 @@
-name: CI
+name: Firebase
 
 on:
   push:
@@ -32,6 +32,5 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_BLOG_HUGO_ISSEI }}"
-          expires: 30d
-          channelId: live
           projectId: blog-hugo-issei
+          channelId: live
