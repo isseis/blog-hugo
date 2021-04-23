@@ -9,10 +9,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  build:
+    name: Build
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout Repo
+        uses: actions/checkout@v2
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
@@ -23,12 +25,33 @@ jobs:
           hugo-version: '0.82.1'
           extended: true
 
-      - name: Build
+      - name: Build Site
         run: hugo --cleanDestinationDir --minify
       
-      - run: cp public/index.xml public/feed.xml
+      - name: Create Compat RSS
+        run: cp public/index.xml public/feed.xml
       
-      - name: Deploy
+      - name: Archive Artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: public
+          path: public
+      
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+        
+      - name: Download Artifact
+        uses: actions/download-artifact@master
+        with:
+          name: public
+          path: public
+          
+      - name: Deploy to Firease
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_BLOG_HUGO_ISSEI }}"
