@@ -79,4 +79,5 @@ jobs:
             branch: gh-pages # The branch the action should deploy to.
             folder: public # The folder the action should deploy.
             repository-name: isseis/isseis.github.io
+            token: "${{ secrets.ISSEIS_GH_PAT }}"
 
