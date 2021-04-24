@@ -4,13 +4,13 @@ date: 2020-12-09T00:29:29+01:00
 order: 2
 ---
 GitHub にコンテンツを push すると、
-自動的に hugo を使ってサイトをビルドし、
-ビルドされたサイトを Firebase Hosting にデプロイする。
+hugo を使ってサイトをビルドし、
+その結果を Firebase Hosting にデプロイする。
 
 - [Firebase コンソール](http://console.firebase.google.com/)
-- [GitHub Actions](https://docs.github.com/en/actions)
+- [Buddy](https://buddy.works/)
 
-## Firebase
+## Firebase 設定方法
 
 ### Firebase でホスティング先を作成する
 
@@ -58,63 +58,45 @@ firebase.json
 コマンドラインから `firebase deploy --non-interactive` と実行することで、
 `public` ディレクトリ以下をデプロイできることを確認しておく。
 
-## GitHub Actions
+## Buddy 設定方法
 
-GitHub Actions のワークフローは、
-実際には .github/workflows ディレクトリ下に置いた yml ファイルで制御される。
+Webから対話的に設定できる。
 
-エディタで作成したものを直接 GitHub リポジトリに push しても良いが、
-Web で雛形を作る機能がある。
+1. Buddy から GitHub リポジトリへのアクセスを許可する。
+1. プロジェクトを新規作成し、Git Hosting Provider として先に登録した GitHub、その中のリポジトリとしてこのブログの blog-hugo を選択する。
+1. Pipeline に Hugo でのビルドプロセスを登録する。
+    1. Actions に Hugo を追加。
+    1. Environment タブを開き、hugo のインストールスクリプトを編集。新しいバージョンをインストールするように。
+    ```sh
+    apt-get update && apt-get install -y wget
+    wget -O hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.82.1/hugo_0.82.1_Linux-64bit.deb
+    dpkg -i hugo.deb
+    rm hugo.deb
+    ```
+    1. Run タブを開きビルドスクリプトを編集する。デフォルトだと `hugo` だけなので、コマンドラインオプションを追加して不要なファイル削除とミニフィケーションを有効に。二行目はこのブログの RSS の URL が途中で変わったことに対する対応なので、通常は不要。
+    ```sh
+    hugo --cleanDestinationDir --minify
+    cp public/index.xml public/feed.xml
+    ```
+1. Pipeline に Firebase へのデプロイプロセスを登録。
+    1. Actions に Firebase を追加
+    1. Firebase アカウントを登録（コマンドラインツールを使ってアクセストークンを取得して登録）
+    1. Firebase project に blog-hugo-issei を設定
 
-1. GitHub のコンソールからプロジェクトを選択し、Action タブを開く。
-2. New workflow をクリックして、新規ワークフロー作成画面に。
-3. set up a workflow yourself をクリックして .github/workflows/main.yml の編集画面に。
+## GitHub Actions 設定方法（停止中）
 
-.github/workflows/main.yml
-```yml
-name: Firebase
+[設定ファイル](https://github.com/isseis/blog-hugo/blob/master/.github/workflows/main.yml) の作成、動作確認済み。
 
-on:
-  push:
-    branches:
-      - master
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-jobs:
-  deploy:
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: '0.82.1'
-          extended: true
-
-      - name: Build
-        run: hugo --cleanDestinationDir --minify
-
-      - run: cp public/index.xml public/feed.xml
-
-      - name: Deploy
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_BLOG_HUGO_ISSEI }}"
-          projectId: blog-hugo-issei
-          channelId: live
-```
+有効にすると GitHub リポジトリへの push イベントをトリガーとして、
+仮想マシンで Hugo を使ってサイトをビルド後、
+Firebase と、
+GitHub アカウント isseis-gh を使用してプロジェクトページの gh-pages ブランチの２箇所にデプロイする。
 
 ### [GitHub Actions for Hugo](https://github.com/peaceiris/actions-hugo)
 
-Gi仮想マシンに Hugo をインストールする GitHub Action。
+仮想マシンに Hugo をインストールする GitHub Action。
 使用するバージョンを指定するか、
-あるいは最新版を常に使う場合には `latest` としておく。
+あるいは最新版を常に使う場合には `latest` としておく
 
 このサイトでは SCSS を使っているので、
 SCSS 対応の hugo バイナリをインストールするために `extended: true` と指定しておく。
@@ -122,7 +104,7 @@ SCSS 対応の hugo バイナリをインストールするために `extended: 
 ### [Firebase Hosting GitHub Action](https://github.com/FirebaseExtended/action-hosting-deploy)
 
 仮想マシンから Firebase にファイルをデプロイする GitHub Action。
-Google 公式ではないが、Google の有志がメンテしている。
+Google 公式ではないが、Google の有志がメンテしている
 
 1. GitHub から Firebase プロジェクトにアクセスするためのサービスアカウントを作成し、
   アカウントの JSON キーを GitHub リポジトリの encrypted secret に登録する。
@@ -132,4 +114,11 @@ Google 公式ではないが、Google の有志がメンテしている。
     ```
 1. firebase CLI の出力メッセージに従って `firebasesServiceActount` を設定。
 1. 合わせて `projectId` を Firebase でホスティングするプロジェクトの ID にし、
-  `channelId: live` として本番環境へのデプロイを指示。
+  `channelId: live` として本番環境へのデプロイを指示
+
+### 再開方法
+
+1. [GitHub Actions - Select workflow](https://github.com/isseis/blog-hugo/actions/workflows/main.yml)<br/>
+  Enable workflow
+1. [GitHub Pages - Setting - Pages](https://github.com/isseis/isseis.github.io/settings/pages)<br/>
+  Source: Branch gh-pages
