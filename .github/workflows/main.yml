@@ -74,7 +74,7 @@ jobs:
             path: public
             
         - name: Deploy
-          uses: JamesIves/github-pages-deploy-action@4.1.1
+          uses: JamesIves/github-pages-deploy-action@8e80bb1dd1b858d1126c5704ebd5ddb61ff47577 # @4.1.1
           with:
             branch: gh-pages # The branch the action should deploy to.
             folder: public # The folder the action should deploy.
