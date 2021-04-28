@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    name: Build
+    name: Build and Deploy
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout Repo
@@ -27,57 +27,13 @@ jobs:
 
       - name: Build Site
         run: hugo --cleanDestinationDir --minify
-      
+
       - name: Create Compat RSS
         run: cp public/index.xml public/feed.xml
-      
-      - name: Archive Artifact
-        uses: actions/upload-artifact@master
-        with:
-          name: public
-          path: public
-          retention-days: 3
-      
-  deploy-firebase:
-    name: Deploy Firebase
-    needs: build
-    runs-on: ubuntu-18.04
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@master
-        
-      - name: Download Artifact
-        uses: actions/download-artifact@master
-        with:
-          name: public
-          path: public
-          
-      - name: Deploy
+
+      - name: Deploy Firebase
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_BLOG_HUGO_ISSEI }}"
           projectId: blog-hugo-issei
           channelId: live
-
-  deploy-github-pages:
-    name: Deply to GitHub Pages
-    needs: build
-    runs-on: ubuntu-18.04
-    steps:
-        - name: Checkout Repo
-          uses: actions/checkout@master
-
-        - name: Download Artifact
-          uses: actions/download-artifact@master
-          with:
-            name: public
-            path: public
-            
-        - name: Deploy
-          uses: JamesIves/github-pages-deploy-action@8e80bb1dd1b858d1126c5704ebd5ddb61ff47577 # @4.1.1
-          with:
-            branch: gh-pages # The branch the action should deploy to.
-            folder: public # The folder the action should deploy.
-            repository-name: isseis/isseis.github.io
-            token: "${{ secrets.ISSEIS_GH_PAT }}"
-
