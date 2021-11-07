@@ -5,7 +5,6 @@ date: 2020-09-26 12:05:14 +0200
 slug: ankidroid_for_kanji
 tags:
 - 教育
-- 海外在住
 title: Anki を使った漢字の勉強（小学生）
 ---
 小学三年生の息子が漢字を覚えるために、
