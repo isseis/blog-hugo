@@ -24,6 +24,10 @@ $(document).ready(function() {
 });
 </script>
 
+<!-- Math -->
+{{ if .Params.mathjax }}{{ partial "mathjax_support.html" . }}{{ end }}
+{{ if .Params.katex }}{{ partial "katex_support.html" . }}{{ end }}
+
 <!-- getform + reCaptcha -->
 {{ with $.Param "getform" }}
 {{ if and (.endpoint) (in .for $.Page.Type) }}
