@@ -1,5 +1,5 @@
 ---
-title: "Hugo で数式を扱う"
+title: "数式を扱う"
 date: 2021-11-25T22:52:36+01:00
 slug: "math-typesetting-in-hugo"
 tags:
@@ -46,7 +46,6 @@ markdown プロセッサが _ をイタリック指定と認識して置き換�
 文字列が MathJax や KaTeX に渡される段階では、
 すでに $\LaTeX$ 記法で下付きを意味する _ が消えてしまっている。
 
-
 対策としては \`（バッククォート）を使って $\LaTeX$ 記法で書かれた数式を囲んでしまうのが簡単。
 こうすると markdown プロセッサが _ を処理しなくなる
 （参考: [Render LaTeX math expressions in Hugo with MathJax 3](https://geoffruddock.com/math-typesetting-in-hugo/)）。
@@ -88,7 +87,7 @@ code を除いたタグを列挙する。
 $$ f(r) = (1 + r)\frac{1 - (1+r)^{-N}}{r} $$
 
 横軸を $r$、縦軸を $f(r)$ として $N = 10, 11, 12, 13, 14, 15$ の場合のグラフを描画。
-この程度なら数分で作成できます。
+この程度なら数分で作成可能。
 
 {{< image
     path="2021/11/math/PVIFA.png"
