@@ -60,7 +60,7 @@ Swissmedic が予防接種を認可すると、
 １２月１２日現在、
 １１歳以下の子供への予防接種は推奨されていませんが、
 先日の Swissmedic の認可を受けて、
-今週中にファイザー製 Cominarty が１１歳に以下の子供に推奨される見込みです
+今週中にファイザー製 Cominarty が１１歳以下の子供に推奨される見込みです
 （参考：[Ekif 委員長へのインタビュー記事](https://www.srf.ch/news/schweiz/impfempfehlung-der-ekif-das-muessen-sie-zur-coronaimpfung-fuer-kinder-wissen)）。
 
 同様の機能は、
