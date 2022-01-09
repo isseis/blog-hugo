@@ -15,3 +15,5 @@ tags:
     path="2022/01/09/skears-skears-mask-hooks.jpg"
     caption="SKEARS Mask Hooks"
     caption_on_image="true" >}}
+
+（写真は SportXX の [販売ページ](https://www.sportxx.ch/de/p/465216500000/skears) から）
