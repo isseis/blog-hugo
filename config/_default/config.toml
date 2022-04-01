@@ -10,6 +10,9 @@ summaryLength = 100
 
 [params]
   paginate = 5
+  hideModifiedDate = true
+  hideWordCount = true
+  hideReadingTime = true
   twitter = "issei_swe"
   github = "isseis"
   [params.getform]

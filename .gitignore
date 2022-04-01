@@ -1,4 +1,5 @@
 public
 resources
 .firebase
+.hugo_build.lock
 .vs
