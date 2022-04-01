@@ -1,4 +1,5 @@
-baseURL = "https://blog2.issei.org/"
+baseURL = ""
+relativeURLs = true
 languageCode = "ja"
 title = "或曰"
 theme = "pickles"
@@ -13,6 +14,7 @@ summaryLength = 100
   hideModifiedDate = true
   hideWordCount = true
   hideReadingTime = true
+  author = "Issei Suzuki"
   twitter = "issei_swe"
   github = "isseis"
   [params.getform]
