@@ -46,7 +46,7 @@ Gmail で独自ドメインのメールアドレスを差出人としてメー�
 
 ### SPF の設定
 
-使用する仮想専用サーバーのアドレスを DNS サーバーの PSF レコードに登録します。
+使用する仮想専用サーバーのアドレスを DNS サーバーの SPF レコードに登録します。
 
 参考:
 - [SPF (Sender Policy Framework) とは](https://www.nic.ad.jp/ja/basics/terms/spf.html) (JPNIC)
@@ -121,13 +121,6 @@ sudo certbot certonly -d ${VPS_NAME_1} -d ${VPS_NAME_2} --standalone
 いよいよ DKIM 署名を行う MTA として [Postfix](https://www.postfix.org/) を導入・設定します。
 保守を容易にするために [Docker イメージ](https://github.com/panubo/docker-postfix) を使います。
 
-```bash
-mkdir ~/postfix
-cd ~/postfix
-```
-
-このディレクトリに docker-compose の設定ファイルを作成します。
-
 #### IPv4 を使う場合
 
 `docker-compose-ipv4.yml`
@@ -176,20 +169,20 @@ services:
 | `HOST_FQDN` | 仮想専用サーバーのホスト名 (FQDN) |
 | `SMTPD_USERS` | Gmail からメールを送信する際の認証に使用するユーザー名とパスワード |
 
-`SMTPD_USERS` は SMTP 認証で使う IP とパスワードをコロン (:) で区切ったものです。
-複数の IP/パスワード の組を使用する場合にはカンマ (,) で繋げます。
+`SMTPD_USERS` は SMTP 認証で使うユーザー名とパスワードをコロン (:) で区切ったものです。
+複数のユーザー名/パスワードの組を使用する場合にはカンマ (,) で繋げます。
 
 例
 ```text
-SMTPD_USERS=ID1:PASSWORD1,ID2:PASSWORD2
+SMTPD_USERS=USER1:PASSWORD1,USER2:PASSWORD2
 ```
 
 
 設定項目の詳細は [Docker イメージの README.md](https://github.com/panubo/docker-postfix#environment-variables) ならびに [postconf (5)](https://www.postfix.org/postconf.5) を参照してください。
 今回、
-Postfix は Gmail から送信したメールを受け取り DKIM 署名をつけた上でリレーするためだけに使うため、
+Postfix は Gmail から送信したメールを受け取り DKIM 署名をつけた上でリレーするためだけに使うので、
 
-- ローカル宛のメールをは受け取らない
+- ローカル宛のメールは受け取らない
 - Postfix に接続する際には TLS（暗号化）の使用を必須とする
 
 など、あまり一般的ではない設定になっています。
@@ -226,7 +219,7 @@ IPv6 ネットワークを使用するためにいくつか追加項目があり
 docker-compose の [exetends](https://docs.docker.com/compose/extends/#extending-services) キーワードを使って IPv4 用の設定ファイルを再利用し、
 必要な差分だけ記述した `docker-compose-ipv6.yml` ファイルを作成します。
 
-`~/postfix/docker-compose-ipv6.yml`
+`docker-compose-ipv6.yml`
 
 ```yml
 version: '2.1'
@@ -366,8 +359,8 @@ DMARC を設定すると、
 - 設定ファイルのバックアップを作成し、
   サーバーの再構築が必要な場合に即座に対応できるようにする。
 
-簡単なサーバー監視サービスが仮想専用サーバーを提供する企業のサービスに含まれていたので、
-単純に TCP 587 版ポートにアクセスして生存確認、
+仮想専用サーバーを提供する企業のサービスに簡単なサーバー監視サービスが含まれていたので、
+それを使って定期的に TCP 587 番ポートに定期アクセスして生存確認、
 失敗時には Slack に通知を飛ばすようにしました。
 
 設定ファイルは Git リポジトリに登録し、
