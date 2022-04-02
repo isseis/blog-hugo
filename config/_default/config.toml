@@ -1,5 +1,5 @@
-baseURL = ""
-relativeURLs = true
+baseURL = "https://blog2.issei.org/"
+relativeURLs = false
 languageCode = "ja"
 title = "或曰"
 theme = "pickles"
@@ -29,7 +29,7 @@ summaryLength = 100
 
 [[menu.main]]
   name = "About"
-  url = "/about"
+  url = "/about/"
   weight = 1
 
 [[menu.main]]
@@ -39,7 +39,7 @@ summaryLength = 100
 
 [[menu.main]]
   name = "Tags"
-  url = "/tags"
+  url = "/tags/"
   weight = 3
 
 [[menu.main]]
