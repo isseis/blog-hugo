@@ -6,7 +6,7 @@ tags:
 - プログラミング
 ---
 家族間の連絡に Slack のフリープランを使っていましたが、
-９月からフリープランの制約が変更になり９０日以前のメッセージが非表示になるとのこと。
+2022年9月からフリープランの制約が変更になり90日以前のメッセージが非表示になるとのこと。
 
 - [プロプランの料金改定とフリープランの最新情報](https://slack.com/intl/ja-jp/help/articles/7050776459923-%E3%83%97%E3%83%AD%E3%83%97%E3%83%A9%E3%83%B3%E3%81%AE%E6%96%99%E9%87%91%E6%94%B9%E5%AE%9A%E3%81%A8%E3%83%95%E3%83%AA%E3%83%BC%E3%83%97%E3%83%A9%E3%83%B3%E3%81%AE%E6%9C%80%E6%96%B0%E6%83%85%E5%A0%B1)
 
@@ -15,7 +15,7 @@ tags:
 Mattermost は主要機能がオープンソースで開発されており、
 基本機能だけであれば無料で使用可能です。
 
-また Mattermost 社が提供するサーバーを無料プランで利用する場合にはアクセス可能なメッセージ数が１万件に制限されますが（以前の Slack フリープランと同じ）、
+また Mattermost 社が提供するサーバーを無料プランで利用する場合にはアクセス可能なメッセージ数が1万件に制限されますが（以前の Slack フリープランと同じ）、
 自分でサーバーを用意するとメッセージ数の制限もなくなります。
 
 - [Mattermost Pricing](https://www.notion.so/Slack-Mattermost-9eb272cde4c04eb8a6db804cefe909b0)
@@ -32,7 +32,7 @@ Mattermost 社が Docker イメージと Docker Compose の設定ファイルを
 
 他に必要だった作業は、
 VPS のパケットフィルタを変更して HTTP ポート 443 に接続可能にしたことと、
-DNS の設定ぐらいしょうか。
+DNS の設定ぐらいでしょうか。
 
 ## データ移行
 
@@ -89,6 +89,20 @@ Mattermost ではランダムな英数字列に変換されていました。
 初回のみ一括インデクス付与を行う必要があります。
 一括インデクス作成にはそれなりに時間がかかります。
 
+### Incoming Webhook
+
+他のアプリから Slack の Incoming Webhook を使って Slack のチャンネルに通知を送っていたものがあるので、
+それを Mattermost の Incoming Webhook を利用するように変更しました。
+
+Slack と異なり、
+現在の Mattermost では Bot アカウントで Webhook を作成することはできません。
+
+参考: [Using bot accounts](https://developers.mattermost.com/integrate/admin-guide/admin-bot-accounts/)
+> Only user accounts can create and configure webhooks and slash commands.
+
+Incoming Webhook を作成する際に投稿先のチャンネルを限定することは可能で、
+また Incoming Webhook 経由のポストには BOT というラベルが付きます。
+
 ## 運用
 
 ### バックアップ
@@ -99,7 +113,7 @@ Mattermost はデータを次の２か所で管理します。
     メッセージに添付されるファイルやユーザの画像ファイルなど。それぞれ単独のファイルとして保存されます。
 - リレーショナルデータベース<br>
     チャットメッセージやユーザ情報などはリレーショナルデータベースに保存されます。
-    Mattermost 社の提供する Docker Component ファイルを使用する場合は PostgreSQL が使用されますが、
+    Mattermost 社の提供する Docker Compose ファイルを使用する場合は PostgreSQL が使用されますが、
     MySQL を使うことも可能です。
 
 #### ファイル
@@ -127,4 +141,5 @@ sudo docker-compose exec postgres pg_dump -U mmuser mattermost
 
 ### サーバー監視
 
-[mackerel](https://mackerel.io/)  のサーバー監視サービスを使い、定期的に Mattermost サーバーに HTTPS リクエストを送り、サーバーの生存確認をしています。
+[mackerel](https://mackerel.io/)  のサーバー監視サービスを使い、
+定期的に Mattermost サーバーに HTTPS リクエストを送ってサーバーの生存確認をしています。
