@@ -6,3 +6,6 @@
 </p>
 {{ end }}
 {{ end }}
+{{ if not .Site.IsServer }}
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ab579cc8e4bf44458aa73b68a2f99b97"}'></script><!-- End Cloudflare Web Analytics -->
+{{ end }}
