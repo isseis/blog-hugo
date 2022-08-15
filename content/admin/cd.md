@@ -4,13 +4,32 @@ date: 2020-12-09T00:29:29+01:00
 order: 2
 ---
 GitHub にコンテンツを push すると、
-hugo を使ってサイトをビルドし、
-その結果を Firebase Hosting にデプロイする。
+Cloudfront Pages で hugo を使ってサイトをビルドし、
+デプロイする。
 
-- [Firebase コンソール](http://console.firebase.google.com/)
-- [Buddy](https://buddy.works/)
+## Cloudfront Pages 設定方法
 
-## Firebase 設定方法
+[Cloudfont コンソール](https://dash.cloudflare.com/)
+
+1. メニューから Pages を選択し、
+  プロジェクトを作成。
+  Git 接続し blog-hugo レポジトリを選択。
+1. カスタムドメインとして blog2.issei.org を設定。
+1. ビルドの構成は hugo を選択。
+  ビルドコマンドは `hugo --minify` と `--minify` オプションを付けておくと、
+  生成されるファイルの容量が削減される。
+1. 環境変数 `HUGO_VERSION` を設定し、
+  使用する hugo バイナリのバージョンを指定する。
+
+Cloudflare 側で `*.pages.dev` という URL を割り当てるので、
+`blog2.issei.org` の別名として設定しておく。
+
+Cloudflare に DNS を移管した場合は reverse proxy を使用可能。
+クライアントに直接 blog をホスティングしている `*.pages.dev` にアクセスさせる代わりに、
+Cloudfront のエッジサーバーにアクセスさせ、
+そこから blog にアクセスさせることが可能。
+
+## Firebase 設定方法（停止中）
 
 ### Firebase でホスティング先を作成する
 
@@ -58,7 +77,7 @@ firebase.json
 コマンドラインから `firebase deploy --non-interactive` と実行することで、
 `public` ディレクトリ以下をデプロイできることを確認しておく。
 
-## Buddy 設定方法
+## Buddy 設定方法（停止中）
 
 Webから対話的に設定できる。
 
@@ -82,6 +101,12 @@ Webから対話的に設定できる。
     1. Actions に Firebase を追加
     1. Firebase アカウントを登録（コマンドラインツールを使ってアクセストークンを取得して登録）
     1. Firebase project に blog-hugo-issei を設定
+
+### 制限
+
+Buddy はキャッシュサイズが 500MB に制限されている。
+写真の JPG ファイルをすべて Git リポジトリに追加しているため、
+容量を超える可能性がある。
 
 ## GitHub Actions 設定方法（停止中）
 
