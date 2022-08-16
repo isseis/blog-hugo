@@ -25,9 +25,9 @@ Cloudflare 側で `*.pages.dev` という URL を割り当てるので、
 `blog2.issei.org` の別名として設定しておく。
 
 Cloudflare に DNS を移管した場合は reverse proxy を使用可能。
-クライアントに直接 blog をホスティングしている `*.pages.dev` にアクセスさせる代わりに、
+クライアントには直接 blog をホスティングしている `*.pages.dev` にアクセスさせる代わりに、
 Cloudfront のエッジサーバーにアクセスさせ、
-そこから blog にアクセスさせることが可能。
+そこから blog にルーティングする。
 
 ## Firebase 設定方法（停止中）
 
