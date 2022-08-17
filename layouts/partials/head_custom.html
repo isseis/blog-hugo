@@ -1,18 +1,6 @@
 {{ $style := resources.Get "sass/_main.scss" | toCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 
-{{ if not .Site.IsServer }}
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NG2FDK9H8D"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NG2FDK9H8D');
-</script>
-{{ end }}
-
 <!-- medium zoom -->
 <script src="/js/medium-zoom.min.js"></script>
 
