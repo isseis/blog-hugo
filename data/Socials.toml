@@ -1,0 +1,23 @@
+# For the `icon`, see themes/meme/data/SVG.toml
+
+[[socials]]
+    id = "rss"
+    url = "/index.xml"
+    icon = "rss"
+    title = "RSS"
+    weight = 1
+
+[[socials]]
+    id = "github"
+    url = "https://github.com/isseis"
+    icon = "github"
+    title = "GitHub"
+    weight = 2
+
+[[socials]]
+    id = "twitter"
+    url = "https://twitter.com/issei_swe"
+    icon = "twitter"
+    title = "Twitter"
+    weight = 3
+
