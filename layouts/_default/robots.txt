@@ -1,5 +1,7 @@
 User-agent: *
+Sitemap: https://blog2.issei.org/sitemap.xml
 Disallow: /categories/
 Disallow: /tags/
 Disallow: /page/
 Disallow: /posts/
+Disallow: /search.json
