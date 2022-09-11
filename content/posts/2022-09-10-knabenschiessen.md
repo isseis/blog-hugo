@@ -7,7 +7,7 @@ tags:
 ---
 チューリッヒの秋は移動遊園地の季節でもあります。
 
-チューリッヒ市では毎年９月第２週に少年射撃祭 ([Knabenshiessen](https://www.knabenschiessen.ch/)) という射撃大会が行われますが、
+チューリッヒ市では毎年９月第２週に少年射撃祭 ([Knabenschiessen](https://www.knabenschiessen.ch/)) という射撃大会が行われますが、
 それに合わせて大きな移動遊園地もやってくるので（[配置図](https://www.knabenschiessen.ch/festanlass/situationsplan)）、
 子供と一緒に遊びに行ってきました。
 ２０２０年、２０２１年は新型コロナウイルスのために大型イベントが開催できなかったので、
