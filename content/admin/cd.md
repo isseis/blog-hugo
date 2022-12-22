@@ -2,6 +2,7 @@
 title: "継続的デプロイメント"
 date: 2020-12-09T00:29:29+01:00
 order: 2
+share: false
 ---
 GitHub にコンテンツを push すると、
 Cloudfront Pages で hugo を使ってサイトをビルドし、

@@ -3,6 +3,7 @@ layout: single
 date: 2020-12-08T11:16:37+01:00
 title: このページについて
 type: about
+share: false
 ---
 スイスでソフトウェアエンジニアをやっている鈴木一生のブログです。
 
