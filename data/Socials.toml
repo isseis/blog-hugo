@@ -8,16 +8,15 @@
     weight = 1
 
 [[socials]]
+    id = "email"
+    url = "mailto:blog@issei.org"
+    icon = "envelope"
+    title = "Email"
+    weight = 2
+
+[[socials]]
     id = "github"
     url = "https://github.com/isseis"
     icon = "github"
     title = "GitHub"
-    weight = 2
-
-[[socials]]
-    id = "twitter"
-    url = "https://twitter.com/issei_swe"
-    icon = "twitter"
-    title = "Twitter"
     weight = 3
-

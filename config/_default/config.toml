@@ -109,7 +109,7 @@ uglyURLs = false
     # Personal website, default: baseURL
     #website = "https://io-oi.me/"
     # Twitter
-    twitter = "issei_swe"
+    #twitter = ""
 
 # Related content
 [related]
@@ -368,7 +368,7 @@ uglyURLs = false
     # ATTENTION: keep this format, change
     #            the number
 
-    siteTwitter = "issei_swe"
+    #siteTwitter = ""
     # Note: used for Twitter Cards
 
 
@@ -588,7 +588,7 @@ uglyURLs = false
 
     jsonLD = true
     openGraph = true
-    twitterCards = true
+    twitterCards = false
     # ATTENTION: If you set twitterCards
     #            to `true`, be sure to
     #            enable openGraph also.
