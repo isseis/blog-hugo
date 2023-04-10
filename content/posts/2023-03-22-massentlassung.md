@@ -4,6 +4,7 @@ date: 2023-03-22T20:15:56+01:00
 slug: "massentlassung"
 tags:
 - 日記
+- 日本帰国
 ---
 市場環境の悪化に伴い[勤務先が整理解雇を行う](https://blog.google/inside-google/message-ceo/january-update/)ことになり、
 私のポジションも整理対象となりました [^1]。
