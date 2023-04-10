@@ -148,3 +148,10 @@ Google 公式ではないが、Google の有志がメンテしている
   Enable workflow
 1. [GitHub Pages - Setting - Pages](https://github.com/isseis/isseis.github.io/settings/pages)<br/>
   Source: Branch gh-pages
+
+## Zapier 設定
+
+デプロイされた RSS を監視し、
+メールや Mattermost に通知する。
+
+https://zapier.com/
