@@ -7,7 +7,7 @@ tags:
 ---
 チューリッヒ旧市街にある [Williams Butchers Table](https://www.williamsbutcherstable.ch/) am Bellevue で知人と夕食。
 
-名前に Metzgerei & Restaurant （肉屋兼レストラン）とあるように、
+Web ページに Metzgerei & Restaurant （肉屋兼レストラン）とあるように、
 入口近くにあるカウンターで肉を量り売りしています。
 購入して持ち帰るもよし、
 その場で調理してもらってレストランで食べるもよし。
