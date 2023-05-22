@@ -20,7 +20,7 @@ Android の標準フォントだと手書きと形が異なる漢字があるの
 さらに多くの漢字で問題が起きます。
 
 ここで Google Fonts で無料公開されている教科書体フォント [Klee One](https://fonts.google.com/specimen/Klee+One) を使うと、
-下のスクリーンショットのよううに手書きに近い表示が行えます。
+下のスクリーンショットのように手書きに近い表示が行えます。
 
 ![](/assets/2023/05/14/anki_kyokasho_font.png)
 
