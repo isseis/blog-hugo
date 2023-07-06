@@ -25,6 +25,8 @@ tags:
 
 [^steuerung-auf-altersguthaben]: 年金資産の従業員拠出分は所得控除の対象となり、雇用者拠出分は損金算入できる。([BVG Art. 81 Abzug der Beiträge](https://www.fedlex.admin.ch/eli/cc/1983/797_797_797/de#art_81))
 
+[２０２３年７月　追記]({{< ref "2023-07-06-steuer-auf-bvg2.md" >}})
+
 {{< toc >}}
 
 ## 課税地
