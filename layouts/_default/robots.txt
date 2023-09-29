@@ -6,3 +6,6 @@ Disallow: /tags/
 Disallow: /page/
 Disallow: /posts/
 Disallow: /search.json
+
+User-agent: Google-Extended
+Disallow: /
