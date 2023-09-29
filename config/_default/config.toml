@@ -11,6 +11,9 @@ copyright = "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.ja)"
 # Name of theme
 theme = "meme"
 
+# files to ignore
+ignoreFiles = [ '\.crdownload$' ]
+
 # `hugo new` automatically opened text editor
 newContentEditor = ""
 
