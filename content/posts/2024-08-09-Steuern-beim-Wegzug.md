@@ -16,6 +16,8 @@ tags:
 なお州や滞在許可の種別などが異なる場合、
 大枠のプロセスは同じでも細部が異なる可能性があります。
 
+（２０２４年８月１１日一部更新）
+
 {{< toc >}}
 ## TL;DR
 
@@ -152,7 +154,7 @@ tags:
   : 州税務局による所得・財産額の査定結果が通知される (Berechnungsmitteilung; Einschätzungsentscheid)、合わせて最終的な税額も通知される (Veranlagungsverfügung)。予定納税額の方が実際の税額よりも多かったため、還付されることに。
 - ２０２４年8月［地方税］
   : 州税務局による所得・財産額の査定が終わったとの通知を受ける (Berechnungsmitteilung; Einschätzungsentscheid)。
-  最終的な税額の計算、ならびに予定納税との精算待ち。
+  数日後に予定納税に対する利息計算書 (Zinsabrechnung) と最終課税請求書 (Schlussrechung) が送られてきて、不足分を支払う。
 
 ## 用語集
 
