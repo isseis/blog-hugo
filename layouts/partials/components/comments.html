@@ -6,13 +6,7 @@
         お気軽にお送りください。
     </p>
     <form action="https://api.web3forms.com/submit" method="POST" id="web3form">
-        {{ if hugo.IsProduction }}
-            <input type="hidden" name="access_key" value="{{ .endpoint }}">
-        {{ end }}
-        <div class="h-captcha"
-        data-captcha="true"
-        data-render="explicit"
-        ></div>
+        <input type="hidden" name="access_key" value="{{ .endpoint }}">
 
         <input type="hidden" name="subject" value="Blog へのコメントがありました">
         <input type="hidden" name="url" value="{{ $.Page.Permalink }}">
@@ -28,7 +22,8 @@
             <label class="label" for="web3form-body">本文</label>
             <textarea name="message" id="web3form-body" class="web3form-textarea" spellcheck="false" placeholder="本文" required></textarea>
         </div>
-        <button type="submit" class="web3form-submit">送信</button>
+        <div class="h-captcha" data-captcha="true"></div>
+        <button type="submit" class="web3form-submit" id="web3form-submit">送信</button>
     </form>
 </div>
 {{ end }}
