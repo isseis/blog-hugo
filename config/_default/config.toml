@@ -1455,3 +1455,7 @@ uglyURLs = false
         valine = "/npm/valine@1.4.14/dist/Valine.min.js"
         busuanzi = "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
         utterances = "https://utteranc.es/client.js"
+
+    [params.web3form]
+        endpoint = "2b8db879-6817-443b-9615-3999b658d3f5"
+        for = ['posts']

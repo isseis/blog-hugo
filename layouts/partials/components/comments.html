@@ -1,0 +1,28 @@
+{{ with $.Param "web3form" }}
+{{ if in .for $.Page.Type }}
+<div class="web3form-contact">
+    <h2 class="web3form-title">コメントを送る</h2>
+    <p class="web3form-info">
+        お気軽にお送りください。
+    </p>
+    <form action="https://api.web3forms.com/submit" method="POST">
+        {{ if hugo.IsProduction }}
+            <input type="hidden" name="access_key" value="{{ .endpoint }}">
+        {{ end }}
+        <div class="field">
+            <label class="label" for="web3form-name">お名前</label>
+            <input type="text" name="name" class="web3form-text" id="web3form-name" required>
+        </div>
+        <div class="field">
+            <label class="label" for="web3form-mail" for="web3form-mail">メールアドレス</label>
+            <input type="email" name="email" class="web3form-text" id="web3form-mail" required>
+        </div>
+        <div class="field">
+            <label class="label" for="getform-mail" for="web3form-body">本文</label>
+            <textarea name="message" id="web3form-body" class="web3form-textarea" spellcheck="false" placeholder="本文" required></textarea>
+        </div>
+        <button type="submit" class="web3form-submit">送信</button>
+    </form>
+</div>
+{{ end }}
+{{ end }}
