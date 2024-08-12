@@ -96,6 +96,9 @@ uglyURLs = false
         ordered = true
 
 # HTML minify
+[minify]
+    disableSVG = true
+
 [minify.tdewolff.html]
     keepWhitespace = false
 
