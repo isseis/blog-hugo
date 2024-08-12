@@ -9,6 +9,8 @@
         {{ if hugo.IsProduction }}
             <input type="hidden" name="access_key" value="{{ .endpoint }}">
         {{ end }}
+        <div class="h-captcha" data-captcha="true"></div>
+
         <input type="hidden" name="subject" value="Blog へのコメントがありました">
         <input type="hidden" name="url" value="{{ $.Page.Permalink }}">
         <div class="field">

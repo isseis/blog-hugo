@@ -1,0 +1,7 @@
+{{ if hugo.IsProduction }}
+{{ with $.Param "web3form" }}
+{{ if in .for $.Page.Type }}
+<script src="https://web3forms.com/client/script.js" async defer></script>
+{{ end }}
+{{ end }}
+{{ end }}
