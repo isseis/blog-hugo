@@ -22,7 +22,11 @@
             <label class="label" for="web3form-body">本文</label>
             <textarea name="message" id="web3form-body" class="web3form-textarea" spellcheck="false" placeholder="本文" required></textarea>
         </div>
+        <!-- hCaptcha for Advanced Spam Protection. -->
         <div class="h-captcha" data-captcha="true"></div>
+        <!-- SPAM submission detection. Make sure its hidden by default -->
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
         <button type="submit" class="web3form-submit" id="web3form-submit">送信</button>
     </form>
 </div>
