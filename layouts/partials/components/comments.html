@@ -5,7 +5,7 @@
     <p class="web3form-info">
         お気軽にお送りください。
     </p>
-    <form action="https://api.web3forms.com/submit" method="POST" id="web3form">
+    <form action="https://api.web3forms.com/submit" method="POST" id="web3form-form">
         <input type="hidden" name="access_key" value="{{ .endpoint }}">
 
         <input type="hidden" name="subject" value="Blog へのコメントがありました">
@@ -30,5 +30,21 @@
         <button type="submit" class="web3form-submit" id="web3form-submit">送信</button>
     </form>
 </div>
+
+<!-- hCapcha check for web3form -->
+<script>
+    const form = document.getElementById('web3form-form');
+    form.addEventListener('submit', function(e) {
+        const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+        if (!hCaptcha) {
+            e.preventDefault();
+            alert("Please fill out captcha field")
+            return
+        }
+    });
+</script>
+
+<!-- for hCaptcha -->
+<script src="https://web3forms.com/client/script.js" async defer></script>
 {{ end }}
 {{ end }}
