@@ -39,10 +39,6 @@ enableGitInfo = false
 # Enable generation of `robots.txt` file?
 enableRobotsTXT = true
 
-# Number of items per page in paginated
-# lists (valid for the `posts` homepage
-# layout in MemE)
-paginate = 5
 
 # URL related
 disablePathToLower = false
@@ -63,6 +59,11 @@ uglyURLs = false
 # Modified date
 [frontmatter]
     lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
+
+[pagination]
+    disableAliases = false
+    pagerSize = 5
+    path = 'path'
 
 # Markdown renderer
 [markup]
