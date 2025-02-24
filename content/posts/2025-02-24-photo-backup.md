@@ -12,6 +12,10 @@ mermaid: true
 写真・動画の保存先を Google フォトから自宅の NAS に変更し、
 NAS 故障時に備えて AWS S3 にバックアップをとる仕組みを構築しました。
 
+コスト面だけで考えると、
+数TBの写真・動画であれば Google フォトから NAS に移行するメリットは大きくありません。
+ただし容量が増えると NAS の方が割安になります。
+
 ## 背景
 
 Google フォトは多くのユーザーに愛されるサービスで、写真や動画を整理・共有する機能が充実しています。
@@ -41,10 +45,6 @@ Google フォトの [不正使用に関するプログラム ポリシーと違�
 個人が継続的にポリシーを評価して対策を取るのは現実的には不可能で、
 思わぬところでポリシー違反となる可能性があります。
 
-多国籍企業が採用するポリシーは必ずしも日本における常識と合致しない場合もあり、
-たとえば子どもを始めて沐浴させたときの写真が「児童の性的虐待と搾取」に関する著しいポリシー違反と判断され、
-即時アカウントが停止されたケースも報告されています。
-
 ## システム
 
 ### 概要
@@ -64,7 +64,7 @@ Android スマートフォンで撮影した動画・写真は自動的に自宅
 **保存環境**
 ```mermaid
 flowchart LR
-    id1(Synology<br>フォトアプリ) -- HTTPS/QuickConnec<br>over WiFi --> 
+    id1(Synology<br>フォトアプリ) -- HTTPS/DSM<br>over WiFi --> 
     id2[(Synology NAS<br>自宅)] -- Synology Sync -->
     id3[(AWS S3<br>Glacier Deep Archive)]
 
@@ -76,10 +76,10 @@ end
 **閲覧環境**
 ```mermaid
 flowchart LR
-    photoapp(Synology<br>フォトアプリ) <-- HTTPS/QuickConnect --> 
+    photoapp(Synology<br>フォトアプリ) <-- HTTPS/DSM --> 
     nas[(Synology NAS<br>自宅)]
 
-    browser(Webブラウザ) <-- HTTPS --> nas
+    browser(Webブラウザ) <-- HTTPS/DSM --> nas
 
 subgraph Android
     photoapp
@@ -120,11 +120,17 @@ NAS 自体の設定と合わせて、
 
 なお通信速度的には少し不利になりますが、
 NAS と Synology 社のサーバーの間でトンネルを張る [QuickConnect](https://kb.synology.com/ja-jp/DSM/help/DSM/AdminCenter/connection_quickconnect?version=7) という仕組みも使えます。
-こちらの方は設定がほぼ不要で、
-自宅のルーターに port forwarding 規則を設定する必要もありません。
+こちらの方はほぼワンクリックで設定完了で、
+自宅のルーターに port forwarding 規則の追加も必要ありません。
 
 NAS は電子機器ということで停電や落雷などに弱いため、
 無停電電源装置 (UPS) を購入して使っています。
+Synology 社が NAS 毎に対応する UPS 一覧を公開していますが、
+対応している UPS であれば、
+停電時に一定期間は UPS で給電し、
+バッテリーレベルが低下すると NAS を自動でシャットダウンする事も可能です。
+
+参考: [Synology ナレッジセンター: UPS](https://kb.synology.com/ja-jp/DSM/help/DSM/AdminCenter/system_hardware_ups?version=7)
 
 #### Synology Photos
 
@@ -144,9 +150,88 @@ Google フォトほどの精度ではないですが、
 撮影した動画・写真をバックグラウンドで NAS に転送する機能があるため、
 一度インストールして設定してしまえば NAS への転送を意識することはありません。
 
-## 運用
 
-### 既存の写真・動画データの移行
+#### Synology Cloud Sync
+
+Synology Photo アプリから　NAS に転送された写真・動画データは、
+NAS 上で実行される [Synology Cloud Sync](https://www.synology.com/ja-jp/dsm/feature/cloud_sync) サービスを使って AWS S3 に同期しています。
+
+AWS S3 では保存しているデータ量×保存期間に応じて費用がかかりますが [^s3-cost]、
+機能や保証されている性能が異なる複数のストレージクラスが提供されています。
+
+[^s3-cost]: 厳密にはデータのダウンロード、各種操作などに応じて細かく費用がかかります。
+
+一般的な「標準」ストレージクラスは低遅延で読み書きが行えますが、
+大量のデータを保管するとコストが掛かります。
+
+そこで今回のような万が一の事態に備えるためのバックアップには「Glacier Deep Archive」ストレージクラスを使います。
+これは保管コストは S3 ストレージクラスの中で最も安いのですが、
+代わりに登録したデータを取り出すには時間がかかり、
+またデータの取出リクエストにも費用がかかります。
+たとえばデータの取り出しを依頼してから実際にダウンロード可能になるまで、
+12から48時間かかります。
+
+参考：[Amazon S3 ストレージクラス](https://aws.amazon.com/jp/s3/storage-classes/)
+
+1TB のデータを最も安いデータセンターである us-west-2 に保管した場合のデータ保管費用を比較すると、
+標準ストレージクラスだと毎月約 24 USD（約3,500円）かかりますが、
+Glacier Deep Archive クラスだと 1/10 以下の約 1.1 USD（165円）で済みます。
+
+なお Glacier Deep Archive ではファイルの最小ストレージ期間が決まっており、
+短期間でファイルを消した場合でも180日分の費用が課されるので注意が必要です。
+
+#### 設定
+
+私はスマートフォンで写真を撮影した後、
+長期保存不要な写真は数日以内に数日以内に消すことが多いです。
+このようなファイルをすぐに S3 Glacier Deep Archive ストレージクラスでバックアップすると180日分の費用がかかってしまうため、
+次のようなステップを踏んでいます。
+
+1. まずは NAS から AWS S3 には標準ストレージクラスで同期を行う。
+2. S3 のライフサイクルルールを設定して、
+    数日間削除されずに残ったファイルのストレージクラスを「標準」から「Glacier Deep Archive」に変更する。
+
+参考: [Amazon S3 ライフサイクルを使用したオブジェクトの移行](https://docs.aws.amazon.com/ja_jp/AmazonS3/latest/userguide/lifecycle-transition-general-considerations.html)
+
+AWS の細かい設定は省略しますが、
+Synology Cloud Sync で同期する AWS S3 ストレージにアクセスするユーザーには、
+次の権限を与えています。
+公式ドキュメントを見つけられずに試行錯誤した結果なので、
+不要な権限も含まれている可能性があります。
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowAllBasics",
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListAllMyBuckets",
+                "s3:GetBucket*",
+                "s3:ListBucket*"
+            ],
+            "Resource": "arn:aws:s3:::*"
+        },
+        {
+            "Sid": "AllowSepcificBucket",
+            "Effect": "Allow",
+            "Action": [
+                "s3:List*",
+                "s3:Get*",
+                "s3:PutObject*",
+                "s3:DeleteObject*"
+            ],
+            "Resource": [
+                "arn:aws:s3:::BUCKET_NAME",  // 実際の S3 バケットネームで置き換え
+                "arn:aws:s3:::BUCKET_NAME/*"
+            ]
+        }
+    ]
+}
+```
+
+## 既存の写真・動画データの移行
 
 私が Google フォトにある写真・動画データを NAS に移行した方法です。
 
@@ -164,52 +249,13 @@ Android の Google フォトアプリから対話的に行うことも可能で�
 ただし選んだデータの数によっては共有処理が途中で終了してしまい、
 やや動作が不安定でした。
 
-### バックアップ
+## Pros & Cons
 
-NAS に保存されたデータを、
-さらに Amazon が提供するクラウドストレージサービスである AWS S3 にバックアップします。
-
-AWS S3 では保存するデータ量×時間に比例する費用がかかりますが、
-機能や保証されている性能が異なる複数のストレージクラスが提供されています。
-
-一般的な「標準」ストレージクラスは低遅延で読み書きが行えますが、
-大量のデータを保管するとコストが掛かります。
-
-そこで今回のような「万が一」の事態に備えるためのバックアップには「Glacier Deep Archive」ストレージクラスを使います。
-これは保管コストは S3 ストレージクラスの中で最も安いのですが、
-代わりにデータの登録・取出時に多少の費用がかかり、
-また登録したデータを取り出すには時間がかかります。
-データの取り出しを依頼してから実際にダウンロード可能になるまで、
-最大で12時間かかります。
-
-参考：[Amazon S3 ストレージクラス](https://aws.amazon.com/jp/s3/storage-classes/)
-
-たとえば 1TB のデータを最も安いデータセンターである us-west-2 に保管した場合、
-データ保管費用として標準ストレージクラスだと毎月約 24 USD（約3,500円）かかりますが、
-Glacier Deep Archive クラスだと 1/10 以下の約 1.1 USD（165円）で済みます。
-
-なお Glacier Deep Archive ではファイルの最小ストレージ期間が決まっており、
-短期間でファイルを消した場合でも180日分の費用が課されます。
-
-#### 設定
-
-Synology Photo アプリから　NAS に転送された写真・動画データは、
-NAS 上で実行される [Synology Cloud Sync](https://www.synology.com/ja-jp/dsm/feature/cloud_sync) サービスを使って AWS S3 に同期します。
-
-私はスマートフォンで写真を撮影した後、
-その場で不要と判断した写真は即座に、
-後で確認して重複していたりボヤケていたりするものは数日以内に消しています。
-このようなファイルを S3 Glacier Deep Archive ストレージクラスで保存すると180日分の費用がかかってしまうため、
-まずは NAS から AWS S3 には標準ストレージクラスで同期を行い、
-S3 のライフサイクルルールを設定して、
-数日間削除されずに残ったファイルのストレージクラスを「標準」から「Glacier Deep Archive」に変更しています。
-
-参考: [Amazon S3 ライフサイクルを使用したオブジェクトの移行](https://docs.aws.amazon.com/ja_jp/AmazonS3/latest/userguide/lifecycle-transition-general-considerations.html)
-
-## 損得勘定
+### 機能面
 
 移行によって良くなった点もあれば、
-Google フォトでは可能だったが諦めざるを得なかったこともあります。
+Google フォトでは可能だったが、
+移行後は諦めざるを得なかったこともあります。
 
 良くなった点
 - 写真・動画は完全に自分の所有となり、サービス提供者側のポリシー変更などによりデータを失うリスクが減りました。
@@ -228,6 +274,30 @@ Google フォトでは可能だったが諦めざるを得なかったことも�
 - Google フォトでは Google アカウントを持っている人と簡単に写真を共有できますが、
     Sylonogy NAS だと面倒です。
     共有したい写真だけ一時的に Google フォトにアップロードして対応しています。
-- バックアッププランの作成や、万が一 NAS が壊れた場合のリカバリは、すべて自分で行う必要があります。
 
 [^obj-search]: 上位機種の NAS である DS224+ を使うと、写真に写っている物で検索することも可能です。
+
+また環境構築には、
+ネットワークや Amazon Web Services の知識が必要となり、
+バックアッププランの策定や、
+万が一 NAS が壊れた場合のリカバリは、すべて自分で行う必要があります。
+Synology のアプリケーションや AWS は良くできているとはいえ、
+IT 関連の知識・経験がないと設定は難しいかもしれません。
+
+### コスト
+
+4TB まで記録できるようにシステムを作りましたが、
+初期費用は86,000円程度でした。
+
+| 機器 | 機種名 | 実売価格 |
+| - | - | -: |
+| NAS | Synology DS223j | 26,000円 |
+| UPS | Omron BW55T [^ups-nonsupported] | 20,000円 |
+| HDD | Seagate Iron Wolf (HDD/4TB) 2台 | 40,000円 |
+
+なお実際に使用しているのは 500GB 程度なので、
+バックアップを置いている AWS S3 の使用コストは100円／月未満です。
+
+Google が提供するオンラインストレージサービスである Google One は 2TB で年間13,000円、
+これで AI 関連の機能などもついてくるため、
+価格面だけを見ると 4TB 程度では NAS がそこまで安いわけではありません。
