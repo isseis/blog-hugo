@@ -3,7 +3,7 @@ title: "無料版 Gmail で独自ドメインを使ってメールを送信す�
 date: 2022-04-02T13:30:01+02:00
 slug: "dkim-in-gmail"
 tags:
-- プログラミング
+- システム運用
 ---
 独自ドメインを使って Google のサービスを利用する場合 [Google Domains](https://domains.google/) + [Google Workspace](https://workspace.google.com/products/gmail/index.html) を契約するのが王道ですが、
 個人で使う程度であれば Google Domains と無料版の Gmail の組み合わせでも利用可能です [^1]。

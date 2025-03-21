@@ -3,7 +3,7 @@ title: "メールのバックアップ環境を構築する"
 date: 2025-02-15T22:47:27+09:00
 slug: "mail-backup"
 tags:
-- プログラミング
+- システム運用
 toc: true
 mermaid: true
 ---

@@ -4,7 +4,7 @@ aliases:
 date: 2020-09-12 17:40:42 +0200
 slug: hosting-static-web-contents
 tags:
-- プログラミング
+- システム運用
 - blog
 title: 静的 Web コンテンツ作成・配信環境
 ---

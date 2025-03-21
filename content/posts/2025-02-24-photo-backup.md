@@ -3,7 +3,8 @@ title: "写真・動画の保存先を Google フォトから NAS に移行"
 date: 2025-02-24T21:48:30+09:00
 slug: "photo-backup"
 tags:
-- プログラミング
+- システム運用
+- Synology NAS
 toc: true
 mermaid: true
 ---
